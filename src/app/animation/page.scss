@@ -1,0 +1,33 @@
+$cd-primary: red;
+$cd-secondary: pink;
+$cd-btn: purple;
+$ball-size: 50px;
+$cd-btn-start: rgba(1, 28, 55, 0);
+$cd-btn-end: rgba(1, 28, 55, 1);
+
+.container {
+    background-color: rgb(237, 246, 247);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    background-color: $cd-btn;
+    border: 4px solid $cd-btn;
+    border-radius: 10rem;
+    cursor: pointer;
+    font-size: 3rem;
+    overflow: hidden;
+    padding: 1.85rem 3rem;
+    position: relative;
+    color: aqua;
+    transition: transform 450ms, background-color 300ms 150ms;
+
+    &:hover {
+        transform: scale(1.15);
+        background-color: $cd-btn-end
+    }
+}

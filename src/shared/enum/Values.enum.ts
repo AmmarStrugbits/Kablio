@@ -1,0 +1,15 @@
+export enum ValuesEnum {
+    DIVERSITY_INCLUSION = 'Diversity & Inclusion',
+    CHALLENGING_WORK = 'Challenging work',
+    PURPOSEFUL_WORK = 'Purposeful work',
+    GROWTH_ADVANCEMENT = 'Growth & Advancement',
+    WELLBEING = 'Wellbeing',
+    FLEXIBILITY = 'Flexibility',
+    MONEY = 'Money',
+    GREAT_COLLEAGUES = 'Great colleagues',
+    HAVING_FUN = 'Having fun',
+    GREAT_LEADERSHIP = 'Great leadership',
+    INNOVATION = 'Innovation',
+    GREAT_TECH_TOOLS = 'Great tech and tools',
+    LOCATION = 'Location',
+}

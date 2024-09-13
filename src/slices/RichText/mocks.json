@@ -1,0 +1,25 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Non est mollit in nisi enim amet sit dolore dolor officia occaecat magna exercitation. Lorem anim qui occaecat laborum do exercitation quis adipisicing sint officia aliqua. Id et laboris anim consequat amet et non duis officia enim aute."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]

@@ -1,0 +1,70 @@
+{
+  "name": "kablio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install",
+    "slicemachine": "start-slicemachine"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/anton": "^5.0.18",
+    "@fontsource/inter": "^5.0.16",
+    "@fontsource/roboto": "^5.0.8",
+    "@mui/icons-material": "^5.15.0",
+    "@mui/material": "^5.15.14",
+    "@mui/system": "^5.15.1",
+    "@prismicio/client": "^7.4.1",
+    "@prismicio/next": "^1.5.0",
+    "@prismicio/react": "^2.7.4",
+    "@types/js-cookie": "^3.0.6",
+    "airtable": "^0.12.2",
+    "axios": "^1.6.3",
+    "cookie-cutter": "^0.2.0",
+    "csstype": "3.0.10",
+    "framer-motion": "^10.16.16",
+    "js-cookie": "^3.0.5",
+    "mui-tel-input": "^5.1.2",
+    "next": "^14.1.2",
+    "next-translate": "^2.6.2",
+    "notistack": "^3.0.1",
+    "postmark": "^4.0.2",
+    "react": "^18",
+    "react-burger-menu": "^3.0.9",
+    "react-cookie-consent": "^9.0.0",
+    "react-countdown": "^2.3.5",
+    "react-dom": "^18",
+    "react-hook-form": "^7.49.2",
+    "sass": "^1.77.6",
+    "sharp": "^0.33.5",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@slicemachine/adapter-next": "^0.3.38",
+    "@svgr/webpack": "^8.1.0",
+    "@types/js-cookie": "^3.0.6",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/uuid": "^9.0.2",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "husky": "^8.0.0",
+    "prettier": "^3.2.4",
+    "slice-machine-ui": "^1.26.0",
+    "typescript": "^5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
