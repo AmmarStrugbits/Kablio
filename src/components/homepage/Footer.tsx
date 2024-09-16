@@ -109,13 +109,13 @@ const Footer: React.FC<FooterProps> = () => {
 
             <SocialLinksBoxStyled>
                 <Box>
-                    <a href={LinkedinLink}>
+                    <Link href={LinkedinLink}>
                         <LinkedIn />
-                    </a>
+                    </Link>
                 </Box>
-                <a href={instagramLink}>
+                <Link href={instagramLink}>
                     <Instagram />
-                </a>
+                </Link>
             </SocialLinksBoxStyled>
 
             <LinksBoxStyled>

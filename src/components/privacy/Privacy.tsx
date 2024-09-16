@@ -12,6 +12,7 @@ import { styled } from '@mui/material'
 import { theme } from '@/MUI/Theme';
 import HomepageLayout from '@/components/homepage/layout/layout';
 import FooterSection from '@/components/blog/FooterSection';
+import Link from 'next/link';
 
 /*
 |--------------------------------------------------------------------------
@@ -88,7 +89,7 @@ const Privacy: React.FC<PrivacyProps> = ({ children }) => {
                         <StyledText>
                             At Kablio, we are committed to protecting the privacy and security of your personal information. This Privacy Notice
                             explains how we collect, use, disclose, and protect the personal data we gather through our website
-                            <a href="https://www.kablio.com" target="_blank">www.kablio.com</a>.
+                            <Link href="https://www.kablio.com" target="_blank">www.kablio.com</Link>.
                         </StyledText>
                         <StyledText>
                             By using our website, you consent to the practices described in this notice.
@@ -165,7 +166,7 @@ const Privacy: React.FC<PrivacyProps> = ({ children }) => {
                         <StyledText variant='h2'>Contact Us</StyledText>
                         <StyledText>
                             If you have any questions, concerns, or requests regarding this Privacy Notice or the way we handle your personal
-                            information, please contact us at: <a href="mailto:hello@kablio.com">hello@kablio.com</a>.
+                            information, please contact us at: <Link href="mailto:hello@kablio.com">hello@kablio.com</Link>.
                         </StyledText>
                     </Box>
                 </Box>

@@ -13,6 +13,7 @@ import iconInstagram from '@/assets/images/iconInstagram.png'
 import iconLinkedin from '@/assets/images/iconLinkedin.png'
 import { styled } from '@mui/system'
 import { theme } from '@/MUI/Theme'
+import Link from 'next/link'
 
 /*
 |--------------------------------------------------------------------------
@@ -111,22 +112,22 @@ const SubmissionSuccess: React.FC<SubmissionSuccessProps> = () => {
         </SubtitleTypographystyled>
       </TitlesBoxStyled>
       <ImageBoxStyled>
-        <a href="https://www.linkedin.com/company/kablio/" target="_blank">
+        <Link href="https://www.linkedin.com/company/kablio/" target="_blank">
           <Image
             src={iconLinkedin}
             alt="linkedin"
             width={matchesMobile ? 80 : 160}
             height={matchesMobile ? 80 : 160}
           />
-        </a>
-        <a href="https://www.instagram.com/kablio_official?igsh=MXV6OWxyczAwbWlnaQ==" target="_blank">
+        </Link>
+        <Link href="https://www.instagram.com/kablio_official?igsh=MXV6OWxyczAwbWlnaQ==" target="_blank">
           <Image
             src={iconInstagram}
             alt="instagram"
             width={matchesMobile ? 80 : 160}
             height={matchesMobile ? 80 : 160}
           />
-        </a>
+        </Link>
       </ImageBoxStyled>
     </BoxStyled>
   )

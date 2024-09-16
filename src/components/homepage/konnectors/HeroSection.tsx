@@ -15,6 +15,7 @@ import gridWallPaperKablio from '@/assets/images/gridWallPaperKablio.png'
 import KonnectorLogoHomepage from '@/assets/images/KonnectorLogoHomepage.png'
 import { KablioMiniLogo } from '@/assets/svgs/miniLogo'
 import { theme } from '@/MUI/Theme'
+import Link from 'next/link'
 
 /*
 |--------------------------------------------------------------------------
@@ -217,9 +218,9 @@ const HeroSection: React.FC = () => {
                                 variant="contained"
                                 startIcon={<KablioMiniLogo />}
                             >
-                                <a href='https://at4r1q5j37o.typeform.com/to/CvzQJ2v2' target='_blank'>
+                                <Link href='https://at4r1q5j37o.typeform.com/to/CvzQJ2v2' target='_blank'>
                                     Pre-register
-                                </a>
+                                </Link>
                             </ButtonStyled>
                         </ButtonsBoxStyled>
                     </TitlesBoxStyled>

@@ -8,6 +8,7 @@ import { Box, Button, Typography, styled } from '@mui/material'
 import GiantKablioLogo from '@/assets/images/GiantKablioLogo.png'
 import { KablioMiniLogo } from '@/assets/svgs/miniLogo'
 import Footer from '../Footer'
+import Link from 'next/link'
 
 
 /*
@@ -150,9 +151,9 @@ const FooterSectionEmployerRecruiter: React.FC<FooterSectionEmployerRecruiterPro
                             variant="contained"
                             startIcon={<KablioMiniLogo />}
                         >
-                            <a href='https://at4r1q5j37o.typeform.com/to/CvzQJ2v2' target='_blank'>
+                            <Link href='https://at4r1q5j37o.typeform.com/to/CvzQJ2v2' target='_blank'>
                                 Pre-register
-                            </a>
+                            </Link>
                         </ButtonStyled>
                     </ButtonBoxStyled>
                 </ContentBoxStyled>

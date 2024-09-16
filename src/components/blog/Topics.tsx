@@ -151,9 +151,9 @@ const Topics: React.FC<TopicsProps> = (props: TopicsProps) => {
                             justifyContent: 'center',
                             boxShadow: '0px 12px 16px -4px rgba(16, 24, 40, 0.18)',
                         }}>
-                            <a key={article.uid} href={`/blog/${article.uid}`} >
+                            <Link key={article.uid} href={`/blog/${article.uid}`} >
                                 <ArticleCard articleData={article} />
-                            </a>
+                            </Link>
                         </div>
                     ))}
             </ArticleCardContainerStyled>

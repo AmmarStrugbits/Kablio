@@ -9,6 +9,7 @@ import {
 
 import { Box, Typography } from "@mui/material";
 import { theme } from "@/MUI/Theme";
+import Link from "next/link";
 
 // Composant pour le bloc de code
 
@@ -22,9 +23,9 @@ export const components: JSXMapSerializer = {
   hyperlink: ({ node, children }) => {
     return (
       // <Box>
-      <a href={node.data.url} target="_blank" style={{ textDecoration: 'none', color: '#4343FE', cursor: "pointer" }}>
+      <Link href={node.data.url || ''} target="_blank" style={{ textDecoration: 'none', color: '#4343FE', cursor: "pointer" }}>
         {children}
-      </a>
+      </Link>
       // </Box>
     );
   },
