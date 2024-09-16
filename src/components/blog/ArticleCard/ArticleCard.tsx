@@ -13,6 +13,7 @@ import { ArrowUpRight } from '@/assets/svgs/ArrowUpRight'
 import { theme } from '@/MUI/Theme'
 import TagArticle from './TagArticle'
 import AuthorSpace from './AuthorSpace'
+import Link from 'next/link'
 /*
 |--------------------------------------------------------------------------
 | Contracts
@@ -81,7 +82,8 @@ const ImageContainer = styled(Box)({
   alignSelf: 'center',
   textAlign: 'center', // Centrer horizontalement l'image à l'intérieur de son conteneur
 })
-const anchorTagStyles = {
+
+const AnchorTagStyled = styled(Link)({
   fontFamily: 'Roboto',
   fontSize: '1.375rem',
   fontWeight: '600',
@@ -90,7 +92,7 @@ const anchorTagStyles = {
   display: '-webkit-box',
   WebkitLineClamp: 4, // Limite le nombre de lignes à afficher
   WebkitBoxOrient: 'vertical',
-}
+})
 /*
 |--------------------------------------------------------------------------
 | Component
@@ -126,14 +128,13 @@ const ArticleCard: React.FC<ArticleCardProps> = (props: ArticleCardProps) => {
         <TitleBoxStyled>
           {/* Changed structure to add link */}
           <Typography component="h3">
-            <Typography
-              sx={anchorTagStyles}
-              component="a"
+            <AnchorTagStyled
               href={`/blog/${props.articleData.uid}`}
               key={props.articleData.uid}
+              suppressHydrationWarning
             >
               {props.articleData.title}
-            </Typography>
+            </AnchorTagStyled>
             {/* Previous code */}
             {/* <TruncatedTypography>
                 {props.articleData.title}

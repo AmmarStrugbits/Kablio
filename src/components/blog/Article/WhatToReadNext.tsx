@@ -5,16 +5,12 @@
 | Author: eric@reskue.art
 */
 
-import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { BlogEyes } from '@/assets/images/blog/BlogEyes'
 import { Box, Typography, styled } from '@mui/material'
 import Link from 'next/link'
 import ArticleCard from '../ArticleCard/ArticleCard'
 import { ArticleDataOverview } from '../Topics'
-import { createClient } from '@/prismicio'
-import * as prismic from "@prismicio/client"
-//import { styled } from '@mui/material'
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +19,7 @@ import * as prismic from "@prismicio/client"
 */
 export interface WhatToReadNextProps //extends buttonProps
 {
-    currentUidArticle: string;
+    articlesTyTag: ArticleDataOverview[]
 }
 /*
 |--------------------------------------------------------------------------
@@ -54,31 +50,7 @@ const ArticleCardContainerStyled = styled(Box)(() => ({
 |--------------------------------------------------------------------------
 */
 const WhatToReadNext: React.FC<WhatToReadNextProps> = (props: WhatToReadNextProps) => {
-    const [articles, setArticles] = useState<ArticleDataOverview[]>([]);
-    const client = createClient();
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const articlesByTag = await client.getAllByType('article', {
-                limit: 3,
-                filters: [
-                    prismic.filter.not('my.article.uid', props.currentUidArticle)
-                ]
-            });
-            const formattedArticles: ArticleDataOverview[] = articlesByTag.map((article) => ({
-                uid: article.uid,
-                title: article.data.article_title[0]?.text || '',
-                imageUrl: article.data.article_main_image.url || null,
-                tag: article.tags,
-                authorName: article.data.article_informations[0]?.author_name || 'Unknown',
-                authorAvatarUrl: article.data.article_informations[0]?.author_avatar.url || null,
-                publicationDate: article.data.article_informations[0]?.publication_date || 'Unknown Date',
-                rating: article.data.article_rating || null,
-            }));
-            setArticles(formattedArticles);
-        };
-        fetchData();
-    }, []);
+    const { articlesTyTag } = props
 
     // Render
     //--------------------------------------------------------------------------
@@ -94,8 +66,8 @@ const WhatToReadNext: React.FC<WhatToReadNextProps> = (props: WhatToReadNextProp
                 }}
             >What to read next</Typography>
             <ArticleCardContainerStyled>
-                {articles.map(article => (
-                    <Link key={article.title} href={`/blog/${article.uid}`} passHref>
+                {articlesTyTag?.map(article => (
+                    <Link key={article.title} href={`/blog/${article.uid}`} passHref >
                         <ArticleCard articleData={article} />
                     </Link>
                 ))}

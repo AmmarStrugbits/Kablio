@@ -1,4 +1,5 @@
 'use client'
+
 import Topics from '@/components/blog/Topics';
 import Article from '@/components/blog/Article/Article';
 import { Box } from '@mui/material';
@@ -9,6 +10,7 @@ type PropsType = {
     topicExists: boolean
     articles: AllDocumentTypes
     topicArticles: ArticleDataOverview[]
+    articlesTyTag: ArticleDataOverview[]
     loading: boolean
     tag: string
 }
@@ -40,6 +42,7 @@ const PageBoxStyle = {
 const BlogPageHandler = ({
     topicExists,
     topicArticles,
+    articlesTyTag,
     articles,
     loading,
     tag
@@ -52,12 +55,13 @@ const BlogPageHandler = ({
     return (
         <>
             <Box sx={PageBoxStyle}>
+
                 {topicExists ?
                     (
                         <Topics topicArticles={topicArticles} tag={tag} />
                     ) :
                     (
-                        <Article articles={articles} tag={tag} />
+                        <Article articlesTyTag={articlesTyTag} articles={articles} tag={tag} />
                     )}
             </Box>
         </>

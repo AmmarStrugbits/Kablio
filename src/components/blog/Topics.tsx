@@ -145,16 +145,17 @@ const Topics: React.FC<TopicsProps> = (props: TopicsProps) => {
                         const ratingB = parseInt(b.rating || '0', 10);
                         return ratingB - ratingA;
                     }).map((article: any) => (
-                        <div key={article.uid} onClick={() => { }} style={{
-                            cursor: 'pointer',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            boxShadow: '0px 12px 16px -4px rgba(16, 24, 40, 0.18)',
-                        }}>
-                            <Link key={article.uid} href={`/blog/${article.uid}`} >
+                        <Box key={article.uid} onClick={() => { }}
+                            sx={{
+                                cursor: 'pointer',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                boxShadow: '0px 12px 16px -4px rgba(16, 24, 40, 0.18)',
+                            }}>
+                            <Link key={article.uid} href={`/blog/${article.uid}`} passHref suppressHydrationWarning>
                                 <ArticleCard articleData={article} />
                             </Link>
-                        </div>
+                        </Box>
                     ))}
             </ArticleCardContainerStyled>
         </TopicsBoxStyled>

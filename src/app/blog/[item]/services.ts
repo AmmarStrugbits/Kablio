@@ -1,4 +1,5 @@
 import { createClient } from '@/prismicio'
+import * as prismic from "@prismicio/client"
 
 export interface ArticleDataOverview {
     uid: string;
@@ -17,7 +18,8 @@ type Params = {
 
 const client = createClient();
 export const getArticles = async (params: Params) => {
-    const articlesByTag = await client.getAllByTag(params.item);
+    const { item } = params
+    const articlesByTag = await client.getAllByTag(item);
     const formattedArticles: ArticleDataOverview[] = articlesByTag.map((article) => ({
         uid: article.uid,
         title: article.data.article_title[0]?.text || '',
@@ -33,11 +35,33 @@ export const getArticles = async (params: Params) => {
 
 
 export const getArticlesByUid = async (params: Params) => {
+    const { item } = params
     try {
-        const articleByUID = await client.getByUID('article', params.item);
+        const articleByUID = await client.getByUID('article', item);
         return articleByUID;
     } catch (error) {
         console.log('Something went wrong');
         return null;
     }
+};
+
+export const getAllArticlesByTagType = async (params: Params) => {
+    const { item } = params
+    const articlesByTag = await client.getAllByType('article', {
+        limit: 3,
+        filters: [
+            prismic.filter.not('my.article.uid', item)
+        ]
+    });
+    const formattedArticles: ArticleDataOverview[] = articlesByTag.map((article) => ({
+        uid: article.uid,
+        title: article.data.article_title[0]?.text || '',
+        imageUrl: article.data.article_main_image.url || null,
+        tag: article.tags,
+        authorName: article.data.article_informations[0]?.author_name || 'Unknown',
+        authorAvatarUrl: article.data.article_informations[0]?.author_avatar.url || null,
+        publicationDate: article.data.article_informations[0]?.publication_date || 'Unknown Date',
+        rating: article.data.article_rating || null,
+    }));
+    return formattedArticles
 };

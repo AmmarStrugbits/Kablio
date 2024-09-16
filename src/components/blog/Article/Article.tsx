@@ -6,7 +6,6 @@
 import HeaderArticle from './HeaderArticle'
 import { ArticleDataOverview } from '../Topics';
 import { Box } from '@mui/material';
-import Image from 'next/image';
 import AuthorSpace from '../ArticleCard/AuthorSpace';
 import DefaultArticleMainImage from '@/assets/images/blog/ImageArticle/ArticleImage.png'
 import { AllDocumentTypes } from '../../../../prismicio-types';
@@ -22,12 +21,24 @@ import { ArticleBoxStyled, AuthorBox, Divider, MainArticleBoxStyled, SubHeaderBo
 */
 export interface ArticleProps //extends buttonProps
 {
+    articlesTyTag: TopicArticleDataOverview[]
     articles: AllDocumentTypes
     tag: string
 }
 export interface ArticleData extends ArticleDataOverview {
     uid: string;
     // slices: SliceZone<ArticleDocumentDataSlicesSlice>
+}
+
+export interface TopicArticleDataOverview {
+    uid: string;
+    title: string | undefined;
+    imageUrl: string | null | undefined;
+    tag: string[];
+    authorName: string | undefined;
+    authorAvatarUrl: string | null | undefined;
+    publicationDate: string | undefined;
+    rating: string | null;
 }
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +51,8 @@ export interface ArticleData extends ArticleDataOverview {
 |--------------------------------------------------------------------------
 */
 const Article: React.FC<ArticleProps> = (props: ArticleProps) => {
-    const { articles, tag } = props
+    const { articlesTyTag, articles, tag } = props
+
     // Render
     //--------------------------------------------------------------------------
     return (
@@ -61,9 +73,9 @@ const Article: React.FC<ArticleProps> = (props: ArticleProps) => {
                         width={articles.data.article_main_image.dimensions?.width}
                         height={articles.data.article_main_image.dimensions?.height}
                         style={{
-                            objectFit:'cover',
+                            objectFit: 'cover',
                         }}
-                        />
+                    />
                     <Divider></Divider>
                     <AuthorBox>
                         <AuthorSpace
@@ -90,7 +102,7 @@ const Article: React.FC<ArticleProps> = (props: ArticleProps) => {
                 </Box>
                 <FooterArticle articlesTags={articles.tags} />
             </MainArticleBoxStyled>
-            <WhatToReadNext currentUidArticle={tag} />
+            <WhatToReadNext articlesTyTag={articlesTyTag} />
         </ArticleBoxStyled >
     )
 }

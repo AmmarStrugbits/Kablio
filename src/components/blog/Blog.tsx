@@ -13,7 +13,7 @@ import React from 'react'
 import { Box, Typography, styled, useMediaQuery } from '@mui/material'
 import { theme } from '@/MUI/Theme'
 import Link from 'next/link'
-import HomepageLayout from '@/components/homepage/layout/layout'
+// import HomepageLayout from '@/components/homepage/layout/layout'
 import { Topic, topics } from '@/services/blog/blog.services'
 
 /*
@@ -78,7 +78,7 @@ const Blog: React.FC<BlogProps> = () => {
   // Render
   //--------------------------------------------------------------------------
   return (
-    <PageStyled>
+    <PageStyled >
       <TitleBoxStyled>
         <Typography
           sx={{
@@ -113,10 +113,10 @@ const Blog: React.FC<BlogProps> = () => {
       </TitleBoxStyled>
 
       {topicChunks.map((chunk, index) => (
-        <RowTopicCardBoxStyled key={index}>
+        <RowTopicCardBoxStyled key={index} >
           {chunk.map((topic) => (
-            <Link key={topic.tag} href={`/blog/${topic.tag}`} passHref>
-              <TopicCard topic={topic} href={`/blog/${topic.tag}`} />
+            <Link key={topic.tag} href={`/blog/${topic.tag}`} suppressHydrationWarning >
+              <TopicCard key={topic.tag} topic={topic} href={`/blog/${topic.tag}`} />
             </Link>
           ))}
         </RowTopicCardBoxStyled>

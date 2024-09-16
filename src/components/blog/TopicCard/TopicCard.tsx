@@ -11,6 +11,7 @@ import { ArrowUpRight } from '@/assets/svgs/ArrowUpRight'
 import { Topic } from '@/services/blog/blog.services'
 import { Box, Typography, styled, useMediaQuery } from '@mui/material'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 /*
 |--------------------------------------------------------------------------
@@ -56,7 +57,7 @@ const TopBoxStyled = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {},
 }))
 
-const TitleStyled = styled(Typography)(({ theme }) => ({
+const TitleLinkStyled = styled(Link)(({ theme }) => ({
   fontFamily: 'Anton',
   fontSize: '1.5rem',
   color: 'black',
@@ -82,16 +83,14 @@ const TopicCard: React.FC<TopicCardProps> = (props: TopicCardProps) => {
   //--------------------------------------------------------------------------
   return (
     <TopicCardBoxStyled onClick={props.onClick}>
-      <TopBoxStyled>
-        <Typography component="h3">
-          <Typography
-            sx={{ fontFamily: 'Anton', fontSize: '1.5rem', color: 'black' }}
-            component="a"
+      <TopBoxStyled >
+        <Typography component="h3" >
+          <TitleLinkStyled
             href={props.href}
             key={props.href}
           >
             {props.topic.title}
-          </Typography>
+          </TitleLinkStyled>
         </Typography>
         <BoxIcon>
           <ArrowUpRight isMobile={matchesMobile} />

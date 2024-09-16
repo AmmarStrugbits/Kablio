@@ -4,7 +4,7 @@ import { topics } from '@/services/blog/blog.services'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { topicsSchema } from './blogSchema'
-import { getArticles, getArticlesByUid } from './services'
+import { getAllArticlesByTagType, getArticles, getArticlesByUid } from './services'
 import { redirect } from 'next/navigation'
 
 type Props = {
@@ -410,7 +410,7 @@ export async function generateMetadata({
   if (topicExists) {
     const matchingTopic = topics.find((topic) => topic.tag === params.item)
     const topicMeta = topicMetadata.find((meta) => meta.tag === params.item)
-    topicSchema = topicsSchema.find(
+    topicSchema = await topicsSchema.find(
       (schema) => schema.tag === params.item
     )?.schema
 
@@ -444,7 +444,7 @@ export async function generateMetadata({
       console.error(`Error fetching article: ${error}`)
       return null
     }
-    subTopicSchema = topicsSchema.find(
+    subTopicSchema = await topicsSchema.find(
       (schema) => schema.tag === params.item
     )?.schema
 
@@ -497,6 +497,7 @@ export default async function Page({ params }: Props) {
   const topicExists: TopicExists = topics.some((topic) => topic.tag === params.item);
   let articles: any;
   let topicArticles: any;
+  let articlesTyTag: any;
   let loading = true;
 
 
@@ -504,8 +505,19 @@ export default async function Page({ params }: Props) {
     topicArticles = await getArticles(params);
   } else {
     articles = await getArticlesByUid(params);
+    articlesTyTag = await getAllArticlesByTagType(params)
   }
+
   loading = false;
+
+  const props = {
+    topicExists,
+    articles,
+    topicArticles,
+    articlesTyTag,
+    loading,
+    tag: params.item
+  }
 
   if (!topicArticles && !articles) {
     redirect('/blog/')
@@ -539,7 +551,7 @@ export default async function Page({ params }: Props) {
           />
         </>
       )}
-      <BlogPageHandler topicExists={topicExists} topicArticles={topicArticles} articles={articles} loading={loading} tag={params.item} />
+      <BlogPageHandler {...props} />
     </>
   )
 }
