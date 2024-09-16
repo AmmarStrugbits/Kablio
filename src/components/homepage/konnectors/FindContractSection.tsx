@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: FindContractSection.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { theme } from '@/MUI/Theme'
 import { Box, styled, useMediaQuery } from '@mui/material'

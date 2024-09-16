@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: DesktopMenu.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { Button, Typography } from '@mui/material'
 import { Box, styled } from '@mui/system'

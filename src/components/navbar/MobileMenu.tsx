@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: NavbarMobile.tsx
 | Author: FODEILLA Hasni (hasni1.fodeilla@epitech.eu)
 */
-
-"use client"
 
 import React from "react";
 import Link from "next/link";

@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: page.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import SearchPreferences from '@/components/you/searchPreferences/SearchPreferences'
 import { SearchPreferenceDataProvider } from '@/contexts/searchPreferenceContext'

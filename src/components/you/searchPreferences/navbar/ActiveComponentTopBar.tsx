@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: ActiveComponentTopBar.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { CloseTopBarActiveComponent } from '@/assets/svgs/CloseTopBarActiveComponent'
 import { LineTopBarActiveComponent } from '@/assets/svgs/LineTopBarActiveComponent'

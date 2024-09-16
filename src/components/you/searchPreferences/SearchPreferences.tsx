@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: SearchPreferences.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { Box, Drawer, keyframes, useMediaQuery } from '@mui/material'
 import { styled } from '@mui/system'

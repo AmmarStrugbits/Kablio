@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: SaveButton.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { Button, ButtonProps } from '@mui/material'
 import React, { useEffect } from 'react'

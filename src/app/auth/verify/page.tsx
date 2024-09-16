@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: page.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import FailedVerification from '@/app/auth/verify/FailedVerification'
 import SuccessVerification from '@/app/auth/verify/SuccessVerification'

@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: SidebarNavLink.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React from 'react'
 import { Box, Button, Typography, styled } from '@mui/material'

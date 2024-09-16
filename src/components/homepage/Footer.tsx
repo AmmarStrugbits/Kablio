@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: Footer.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React from 'react'
 

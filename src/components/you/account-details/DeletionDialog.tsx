@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: DeletionDialog.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { Button, Dialog, DialogProps, Typography } from '@mui/material'
 import { Box, styled, useMediaQuery } from '@mui/system'

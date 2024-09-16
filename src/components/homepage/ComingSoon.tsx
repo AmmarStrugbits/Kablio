@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: ComingSoon.tsx
 | Author: eric@reskue.art
 */
-
-"use client "
 
 import React from 'react'
 import { Box, Typography, styled } from '@mui/material'

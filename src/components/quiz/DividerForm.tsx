@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: DividerForm.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React from 'react'
 import { Divider, styled } from '@mui/material';

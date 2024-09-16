@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: Values.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { ValuesEnum } from '@/shared/enum/Values.enum';
 import React, { useEffect, useState } from 'react'

@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: GetBackToSwiping.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { Typography } from '@mui/material'
 import { Box, styled } from '@mui/system';

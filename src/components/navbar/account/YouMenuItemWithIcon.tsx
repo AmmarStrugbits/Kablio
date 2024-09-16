@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: YouMenuItemWithIcon.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { ListItem, Typography, styled } from '@mui/material'
 import React from 'react'

@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: StatusButton.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { Button, ButtonProps, Theme } from '@mui/material'
 import React from 'react'

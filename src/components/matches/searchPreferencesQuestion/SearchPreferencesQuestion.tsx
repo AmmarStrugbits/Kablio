@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: SearchPreferencesQuestion.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { theme } from '@/MUI/Theme';
 import { useMediaQuery } from '@mui/system';

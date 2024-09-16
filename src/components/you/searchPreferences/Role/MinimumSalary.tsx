@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: MinimumSalary.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { SalaryWheel } from '@/components/salaryWheel/SalaryWheel'
 import { Box, Typography } from '@mui/material'

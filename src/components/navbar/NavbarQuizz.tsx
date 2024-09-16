@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: NavbarQuizz.tsx
 | Author: eric@reskue.tech
 */
-
-"use client"
 
 import LightGreyKablioLogo from '@/assets/svgs/authNavBar/LightGreyKablioLogo.svg'
 import { Box, styled, useMediaQuery } from '@mui/material'

@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: CheckMailBox.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { KablioIconContained } from '@/assets/svgs/KablioIconContained'
 import { apiRegisterUser } from '@/services/axios/axios.services'

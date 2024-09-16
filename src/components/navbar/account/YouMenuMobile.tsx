@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: YouMenuMobile.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React from 'react'
 import { useRouter } from 'next/navigation'

@@ -1,9 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: NoMatchFound.tsx
 | Author: eric@reskue.art
 */
-"use client"
 
 import { Box, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'

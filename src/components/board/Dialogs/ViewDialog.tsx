@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: ViewDialog.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React, { useContext } from 'react'
 import { theme } from '@/MUI/Theme';

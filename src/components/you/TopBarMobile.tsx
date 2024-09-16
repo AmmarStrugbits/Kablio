@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: TopBarMobile.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { GoBackArrow } from '@/assets/svgs/GoBackArrow'
 import { Box, Typography, styled } from '@mui/material'

@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: ActiveComponentTitle.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { Typography } from '@mui/material'
 import React from 'react'

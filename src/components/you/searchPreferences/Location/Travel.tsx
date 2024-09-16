@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: Travel.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { TravelEnum } from '@/shared/enum/Travel.enum';
 import React from 'react'

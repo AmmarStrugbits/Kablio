@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: RecruiterTermsAndConditions.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { Box, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'

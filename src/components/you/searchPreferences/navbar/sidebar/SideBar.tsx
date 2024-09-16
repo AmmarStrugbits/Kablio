@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: SideBar.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React from 'react'
 import { Box, Typography, styled, useMediaQuery } from '@mui/material'

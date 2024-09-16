@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: RemoveButton.tsx
 | Author: eric@reskue.art
 */
-
-"use client "
 
 import { Button, styled } from '@mui/material'
 import React from 'react'

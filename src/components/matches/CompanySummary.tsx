@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: CompanySummary.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { Calendar } from '@/assets/svgs/Calendar'
 import { Location } from '@/assets/svgs/Location'

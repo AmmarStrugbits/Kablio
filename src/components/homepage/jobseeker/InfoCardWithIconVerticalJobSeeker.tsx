@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: InfoCardwithIconVertical.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React from 'react'
 import Image, { StaticImageData } from 'next/image'

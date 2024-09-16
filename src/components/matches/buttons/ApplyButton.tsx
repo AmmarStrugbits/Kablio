@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: ApplyButton.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React from 'react'
 import { Button, ButtonProps, styled } from '@mui/material'

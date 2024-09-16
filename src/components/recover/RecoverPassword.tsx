@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: RecoverPassword.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { KablioIconContained } from '@/assets/svgs/KablioIconContained';
 import validationRules from '@/components/quiz/ValidationRules.register';

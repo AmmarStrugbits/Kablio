@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: page.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import Board from '@/components/board/Board'
 import { BoardProvider } from '@/components/board/BoardContext'

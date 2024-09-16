@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: searchPreferenceContext.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { apiGetIndustries, apiGetJobs, apiGetRegions, apiGetSearchPreference } from '@/services/axios/axios.services';
 import { JobRoleData, LocationData } from '@/shared/interfaces/SearchPreference.interfaces';

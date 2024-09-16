@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: ContentDisplay.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { ContentElement } from '@/shared/interfaces/JobPostClass';
 import { styled } from '@mui/system';

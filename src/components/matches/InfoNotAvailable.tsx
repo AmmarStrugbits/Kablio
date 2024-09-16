@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: InfoNotAvailable.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { Typography, useMediaQuery } from '@mui/material';
 import { Box, styled } from '@mui/system';

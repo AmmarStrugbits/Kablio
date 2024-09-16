@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: CreateAccount.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React, { useState } from 'react'
 import { Box, Button, Divider, Typography, styled } from '@mui/material'

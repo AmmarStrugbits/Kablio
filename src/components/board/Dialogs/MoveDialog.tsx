@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: MoveDialog.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React, { useContext } from 'react'
 import { theme } from '@/MUI/Theme'

@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: Navbar.tsx
 | Author: eric@reskue.tech
 */
-
-"use client"
 
 import React, { useState } from 'react'
 import Link from 'next/link'

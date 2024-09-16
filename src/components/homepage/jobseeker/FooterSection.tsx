@@ -1,10 +1,11 @@
+"use client"
+
 // /*
 // | Developed by Reskue
 // | Filename: FooterSection.tsx
 // | Author: eric@reskue.art
 // */
 
-// "use client"
 
 // import React from 'react'
 // import Image from 'next/image'
@@ -140,8 +141,6 @@
 | Filename: FooterSection.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React from 'react'
 import Image from 'next/image'

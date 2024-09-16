@@ -1,9 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: RoleSummary.tsx
 | Author: eric@reskue.art
 */
-"use client"
 
 import { Calendar } from '@/assets/svgs/Calendar'
 import { Location } from '@/assets/svgs/Location'

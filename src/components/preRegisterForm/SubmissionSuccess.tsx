@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: SubmissionSuccess.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { Box, Typography, useMediaQuery } from '@mui/material'
 import Image from 'next/image'

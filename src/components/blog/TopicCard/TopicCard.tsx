@@ -1,10 +1,10 @@
+'use client'
+
 /*
 | Developed by Reskue
 | Filename: TopicCard.tsx
 | Author: eric@reskue.art
 */
-
-'use client'
 
 import { theme } from '@/MUI/Theme'
 import { ArrowUpRight } from '@/assets/svgs/ArrowUpRight'

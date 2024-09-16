@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: Disclaimer.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import LogoGenerator from '@/shared/components/LogoGenerator'
 import { Typography } from '@mui/material'

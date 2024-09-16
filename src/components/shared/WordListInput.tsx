@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: WordListInput.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React, { ChangeEvent, KeyboardEvent, useState } from 'react';
 import { TextField, Chip, Stack, Box, Typography } from '@mui/material';

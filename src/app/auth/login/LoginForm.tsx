@@ -1,10 +1,11 @@
+'use client'
+
 /*
 | Developed by Reskue
 | Filename: LoginForm.tsx
 | Author: eric@reskue.art
 */
 
-'use client'
 
 import React, { useState } from 'react'
 import { useFormContext } from 'react-hook-form'

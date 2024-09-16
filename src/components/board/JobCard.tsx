@@ -1,10 +1,11 @@
+'use client'
+
 /*
 | Developed by Reskue
 | Filename: JobCard.tsx
 | Author: eric@reskue.art
 */
 
-'use client'
 
 import React, { useState } from 'react'
 import Image from 'next/image'

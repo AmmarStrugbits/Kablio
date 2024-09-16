@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: BenefitsSection.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React from 'react'
 import { theme } from '@/MUI/Theme'

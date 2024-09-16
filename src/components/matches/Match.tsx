@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: Match.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { Box, styled, keyframes } from '@mui/material'
 import React, { useEffect, useState } from 'react'

@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: SuccessPasswordRecovery.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { KablioIcon } from '@/assets/svgs/KablioIcon'
 import { Button, Typography } from '@mui/material'

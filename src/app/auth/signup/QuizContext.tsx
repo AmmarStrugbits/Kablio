@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: QuizContext.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React, { createContext, useContext, ReactNode, useState } from 'react';
 import { ExperienceLevel } from '@/shared/enum/ExperienceLevel.enum';

@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: LoadingAnimation.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { CircularProgress } from '@mui/material'
 import { Box } from '@mui/system'

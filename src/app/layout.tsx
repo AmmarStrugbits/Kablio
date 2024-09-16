@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: layout.tsx
 | Author: eric@reskue.tech
 */
-
-"use client"
 
 import './globals.css'
 import ThemeRegistry from '../MUI/ThemeRegistry'

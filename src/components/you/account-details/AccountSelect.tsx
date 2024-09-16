@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: AccountField.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { useAccount } from '@/hooks/useAccount';
 import { Button, FormControl, MenuItem, Select, Typography } from '@mui/material';

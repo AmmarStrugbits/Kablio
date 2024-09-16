@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: ApplyDialog.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 
 import Image from 'next/image'

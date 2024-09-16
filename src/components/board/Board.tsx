@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: page.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { theme } from '@/MUI/Theme'
 import { Box, Button, Typography, useMediaQuery, styled } from '@mui/material'

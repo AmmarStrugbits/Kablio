@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: BottomBar.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { theme } from '@/MUI/Theme'
 import BackButton from '@/components/quiz/BackButton'

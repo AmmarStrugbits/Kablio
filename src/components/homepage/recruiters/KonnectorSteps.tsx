@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: KonnectorSteps.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React from 'react'
 

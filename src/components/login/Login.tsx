@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: login.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React, { useCallback, useEffect } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'

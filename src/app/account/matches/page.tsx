@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: pages.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import MatchPage from '@/components/matches/Match';
 import { SearchPreferenceDataProvider } from '@/contexts/searchPreferenceContext';

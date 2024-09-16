@@ -1,10 +1,11 @@
+'use client'
+
 /*
 | Developed by Reskue
 | Filename: Blog.tsx
 | Author: eric@reskue.art
 */
 
-'use client'
 
 import TopicCard from '@/components/blog/TopicCard/TopicCard'
 import React from 'react'

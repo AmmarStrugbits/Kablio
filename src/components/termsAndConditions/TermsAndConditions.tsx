@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: TermsAndConditions.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React from 'react'
 import { Box, Button, styled, useMediaQuery } from '@mui/material'

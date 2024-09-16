@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: page.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import FailedPasswordRecovery from '@/components/recover/FailedPasswordRecovery'
 import RecoverPassword from '@/components/recover/RecoverPassword'

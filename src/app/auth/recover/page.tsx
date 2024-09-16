@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: page.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import SendRecoveryEmail from '@/components/recover/SendRecoveryEmail'
 import { Box, styled } from '@mui/system'

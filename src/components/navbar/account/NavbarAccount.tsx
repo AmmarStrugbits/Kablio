@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: NavbarAccount.tsx
 | Author: eric@reskue.tech
 */
-
-"use client"
 
 import React from 'react'
 import { theme } from '@/MUI/Theme'

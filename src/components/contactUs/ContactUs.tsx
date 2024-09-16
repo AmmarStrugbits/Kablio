@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: ContactUs.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import React from 'react'
 import TalkToUs, { TalkToUsData } from '../TalkToUs/TalkToUs';

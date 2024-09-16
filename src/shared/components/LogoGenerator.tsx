@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: LogoGenerator.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import ComingSoonLogo from '@/assets/svgs/ComingSoonLogo.svg';
 import { Box, styled, useMediaQuery } from '@mui/material';

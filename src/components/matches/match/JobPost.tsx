@@ -1,9 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: jobPost.tsx
 | Author: eric@reskue.art
 */
-"use client"
 
 import { Box } from '@mui/material'
 import React from 'react'

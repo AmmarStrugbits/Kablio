@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: TitleSection.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { Typography } from '@mui/material';
 import { styled } from '@mui/system';

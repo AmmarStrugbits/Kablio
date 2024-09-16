@@ -1,9 +1,10 @@
+'use client'
+
 /*
 | Developed by Reskue
 | Filename: page.tsx
 | Author: eric@reskue.art
 */
-'use client'
 import { Box } from '@mui/material'
 import React, { useState } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'

@@ -1,10 +1,10 @@
+"use client"
+
 /*
 | Developed by Reskue
 | Filename: CompanyLogoSection.tsx
 | Author: eric@reskue.art
 */
-
-"use client"
 
 import { PublicFileEmbeddable } from '@/shared/interfaces/JobPostClass'
 import { Box, styled } from '@mui/system'
