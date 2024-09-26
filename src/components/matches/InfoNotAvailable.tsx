@@ -31,7 +31,7 @@ export interface InfoNotAvailableProps //extends buttonProps
 |--------------------------------------------------------------------------
 */
 
-const InfoNotAvailableBoxStyled = styled(Box)((theme) => ({
+const InfoNotAvailableBoxStyled = styled(Box)(() => ({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',

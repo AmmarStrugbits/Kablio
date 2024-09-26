@@ -4,13 +4,13 @@
 | Author: eric@reskue.art
 */
 
-import React, { useCallback, useEffect } from 'react';
-import { Box, styled } from '@mui/material';
-import { useQuizContext } from './QuizContext';
-import { apiGetRegions } from '@/services/axios/axios.services';
 import OptionsList from '@/components/quiz/OptionsList';
-import { LocationData } from '@/shared/interfaces/SearchPreference.interfaces';
 import SelectionButtonContainer from '@/components/quiz/SelectionButtonContainer';
+import { apiGetRegions } from '@/services/axios/axios.services';
+import { LocationData } from '@/shared/interfaces/SearchPreference.interfaces';
+import { Box, styled } from '@mui/material';
+import React, { useCallback, useEffect } from 'react';
+import { useQuizContext } from './QuizContext';
 
 /*
 |--------------------------------------------------------------------------
@@ -68,7 +68,7 @@ const JobLocation = ({ setIsValid }: JobLocationProps) => {
             }
         };
         fetchData();
-    }, []);
+    }, [setAvailableCountries, setLocationsData]);
 
 
     // useEffect(() => {
@@ -102,25 +102,25 @@ const JobLocation = ({ setIsValid }: JobLocationProps) => {
             return Array.isArray(values) && values.some(value => value.trim().length > 0);
         });
         setIsValid(!isEmpty);
-    }, [selectedRegions]);
+    }, [selectedRegions, setIsValid]);
 
     /**
        * Updates the selected regions list.
        * @param country - The selected country.
        */
-    const updateSelectedRegions = useCallback((country: string) => {
-        const newSelectedRegions = locationsData
-            .filter(region => region.group.name === country)
-            .map(region => region.id);
+    // const updateSelectedRegions = useCallback((country: string) => {
+    //     const newSelectedRegions = locationsData
+    //         .filter(region => region.group.name === country)
+    //         .map(region => region.id);
 
-        const { [country]: removed, ...rest } = selectedRegions;
+    //     const { [country]: removed, ...rest } = selectedRegions;
 
-        const updatedSelectedRegions = newSelectedRegions.length > 0
-            ? { ...rest, [country]: newSelectedRegions }
-            : rest;
+    //     const updatedSelectedRegions = newSelectedRegions.length > 0
+    //         ? { ...rest, [country]: newSelectedRegions }
+    //         : rest;
 
-        return updatedSelectedRegions;
-    }, [locationsData, selectedRegions]);
+    //     return updatedSelectedRegions;
+    // }, [locationsData, selectedRegions]);
 
     /**
      * Handles the selection of a country and add all regions to the selected list.
@@ -139,13 +139,13 @@ const JobLocation = ({ setIsValid }: JobLocationProps) => {
         setSelectedCountries(newSelectedCountries);
 
         if (selectedCountries.includes(country)) {
-            const { [country]: removed, ...rest } = selectedRegions;
+            const { ...rest } = selectedRegions;
             setSelectedRegions(rest);
         } else {
             // const updatedSelectedRegions = updateSelectedRegions(country);
             // setSelectedRegions(updatedSelectedRegions);
         }
-    }, [selectedCountries, setSelectedCountries, updateSelectedRegions]);
+    }, [selectedCountries, setSelectedCountries, selectedRegions, setSelectedRegions]);
 
 
     /**

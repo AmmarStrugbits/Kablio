@@ -55,7 +55,7 @@ const ButtonStyled = styled(Button)(({ theme }) => ({
 | Component
 |--------------------------------------------------------------------------
 */
-const KablioSignUp: React.FC<KablioSignUpProps> = ({ children }) => {
+const KablioSignUp: React.FC<KablioSignUpProps> = ({ }) => {
     const { checkCredentials } = useAuth();
     // Render
     //--------------------------------------------------------------------------

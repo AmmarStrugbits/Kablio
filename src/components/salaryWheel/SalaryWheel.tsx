@@ -229,13 +229,13 @@ export const SalaryWheel: React.FC<SalaryWheelProps> = ({ onSalaryChange, initia
       const newPercentage = newIndex / (data.length - 1);
       setValueProgress(newPercentage);
     }
-  }, []);
+  }, [initialSalary]);
 
   useEffect(() => {
     const salaryIndex = Math.round(angle as number * (data.length - 1));
     const salary = data[salaryIndex] + ".000";
     onSalaryChange?.(salary);
-  }, [angle]);
+  }, [angle, onSalaryChange]);
 
 
 

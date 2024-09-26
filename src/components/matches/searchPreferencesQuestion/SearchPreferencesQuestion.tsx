@@ -118,7 +118,7 @@ const SearchPreferencesQuestion: React.FC<SearchPreferencesQuestionProps> = ({ o
             setSectionTitle(SearchPreferencesSectionTitlesForMatches[randomKey as keyof typeof SearchPreferencesSectionTitlesForMatches]);
             setActiveComponent(() => SelectedComponent);
         }
-    }, []);
+    }, [getValues]);
 
     return (
         <ComponentBoxStyled>

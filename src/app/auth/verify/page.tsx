@@ -58,7 +58,7 @@ const Page: React.FC = () => {
     if (isLoading && !userVerified) {
       getUserCredentials();
     }
-  }, [userVerified]);
+  }, [userVerified, isLoading, searchParams]);
 
 
 

@@ -11,7 +11,7 @@ import { apiRegisterUser } from '@/services/axios/axios.services'
 import { UserData } from '@/shared/interfaces/User.interfaces'
 import { Button, Typography } from '@mui/material'
 import { Box, styled } from '@mui/system'
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 //import { styled } from '@mui/material'
 
 /*
@@ -88,7 +88,7 @@ const CheckMailBox: React.FC = () => {
   const [resendClicked, setResendClicked] = useState(false);
   const [countdown, setCountdown] = useState(120);
 
-  const handleResendClick = async () => {
+  const handleResendClick = useCallback(async () => {
     setResendClicked(true);
     const intervalId = setInterval(() => {
       setCountdown((prevCountdown) => {
@@ -100,7 +100,7 @@ const CheckMailBox: React.FC = () => {
       });
     }, 1000);
     if (userData) await apiRegisterUser(userData);
-  }
+  }, [userData]);
 
   useEffect(() => {
     const ls = window.localStorage.getItem('userData');
@@ -110,7 +110,7 @@ const CheckMailBox: React.FC = () => {
       window.localStorage.removeItem('userData');
     }
     handleResendClick();
-  }, [])
+  }, [handleResendClick])
 
 
   return (

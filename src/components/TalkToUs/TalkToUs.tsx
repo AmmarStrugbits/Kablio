@@ -6,14 +6,14 @@
 
 // 'use client'
 
-import React, { useState } from 'react'
-import { Box, Button, Checkbox, FormControl, FormControlLabel, InputBase, InputLabel, MenuItem, Select, Typography, styled, useMediaQuery } from '@mui/material'
-import { theme } from '@/MUI/Theme'
-import { useFormContext } from 'react-hook-form';
-import { sendEmail } from '@/services/talkToUs/talkToUs';
 import { KablioMiniLogo } from '@/assets/svgs/miniLogo';
+import { theme } from '@/MUI/Theme';
+import { sendEmail } from '@/services/talkToUs/talkToUs';
+import { Box, Button, Checkbox, FormControl, FormControlLabel, InputBase, InputLabel, Typography, styled, useMediaQuery } from '@mui/material';
+import React, { useState } from 'react';
+import { useFormContext } from 'react-hook-form';
 
-import { MuiTelInput } from 'mui-tel-input'
+import { MuiTelInput } from 'mui-tel-input';
 import Link from 'next/link';
 import { enqueueSnackbar } from 'notistack';
 

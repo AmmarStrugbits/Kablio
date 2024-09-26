@@ -108,27 +108,27 @@ const FeaturesSection: React.FC = () => {
                 <InfoCardwithIconVertical
                     title="QUALITY INBOUND ONLY"
                     text="Only revelant talent sees your jobs"
-                    icon={RelevantJobseeker} iconPosition="bottom"
+                    icon={RelevantJobseeker} iconposition="bottom"
                     backgroundColor="#00FBDF"
-                    iconWidth={5}
+                    iconwidth={5}
                     width={18}
                 />
                 <InfoCardwithIconVertical
                     title="smart talent outreach"
                     text="Message a talent shortlist"
                     icon={FindTheRightRecruiterMin}
-                    iconPosition="bottom"
+                    iconposition="bottom"
                     backgroundColor="#00FBDF"
-                    iconWidth={matchesMobile ? 6 : 9}
+                    iconwidth={matchesMobile ? 6 : 9}
                     width={18}
                 />
                 <InfoCardwithIconVertical
                     title="Swipe through profiles"
                     text="Reject, save or proceed"
                     icon={ScrollFreeZone}
-                    iconPosition="bottom"
+                    iconposition="bottom"
                     backgroundColor="#00FBDF"
-                    iconWidth={matchesMobile ? 3 : 5}
+                    iconwidth={matchesMobile ? 3 : 5}
                     width={18}
                 />
             </FeaturesBoxStyled>

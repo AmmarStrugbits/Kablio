@@ -19,7 +19,7 @@ import { ArticleDataOverview } from '../Topics'
 */
 export interface WhatToReadNextProps //extends buttonProps
 {
-    articlesTyTag: ArticleDataOverview[]
+    articlesByTag: ArticleDataOverview[]
 }
 /*
 |--------------------------------------------------------------------------
@@ -50,7 +50,7 @@ const ArticleCardContainerStyled = styled(Box)(() => ({
 |--------------------------------------------------------------------------
 */
 const WhatToReadNext: React.FC<WhatToReadNextProps> = (props: WhatToReadNextProps) => {
-    const { articlesTyTag } = props
+    const { articlesByTag } = props
 
     // Render
     //--------------------------------------------------------------------------
@@ -66,7 +66,7 @@ const WhatToReadNext: React.FC<WhatToReadNextProps> = (props: WhatToReadNextProp
                 }}
             >What to read next</Typography>
             <ArticleCardContainerStyled>
-                {articlesTyTag?.map(article => (
+                {articlesByTag?.map(article => (
                     <Link key={article.title} href={`/blog/${article.uid}`} passHref >
                         <ArticleCard articleData={article} />
                     </Link>

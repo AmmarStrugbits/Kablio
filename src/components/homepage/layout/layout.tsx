@@ -1,6 +1,12 @@
 import Navbar from "@/components/navbar/Navbar";
+import { ReactNode } from "react";
 
-export default function HomepageLayout(props: any) {
+type Props = {
+    children: ReactNode;
+};
+
+
+export default function HomepageLayout(props: Props) {
     const { children } = props;
     return (
         <div>

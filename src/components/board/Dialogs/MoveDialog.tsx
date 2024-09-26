@@ -6,15 +6,14 @@
 | Author: eric@reskue.art
 */
 
-import React, { useContext } from 'react'
-import { theme } from '@/MUI/Theme'
 import Image from 'next/image'
+import React, { useContext } from 'react'
 
 import { Button, Dialog, DialogProps, Typography } from '@mui/material'
-import { Box, styled, useMediaQuery } from '@mui/system'
+import { Box, styled } from '@mui/system'
 
-import { JobPostDto } from '@/shared/interfaces/JobPostClass'
 import { JobPostStatus } from '@/shared/enum/JobPost.enum'
+import { JobPostDto } from '@/shared/interfaces/JobPostClass'
 
 import InformationNotAvailable from '@/assets/images/InformationNotAvailable.png'
 
@@ -133,7 +132,7 @@ const MoveButton = styled(Button)(() => ({
 const MoveDialog: React.FC<MoveDialogProps> = (props: MoveDialogProps) => {
   const { status, data, onClose } = props;
   const { setNeedUpdate } = useContext(BoardContext);
-  const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  // const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
 
   const handleMove = async () => {

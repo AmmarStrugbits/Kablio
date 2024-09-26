@@ -1,5 +1,6 @@
 import { createClient } from '@/prismicio'
 import * as prismic from "@prismicio/client"
+import { AllDocumentTypes } from '../../../../prismicio-types';
 
 export interface ArticleDataOverview {
     uid: string;
@@ -37,7 +38,7 @@ export const getArticles = async (params: Params) => {
 export const getArticlesByUid = async (params: Params) => {
     const { item } = params
     try {
-        const articleByUID = await client.getByUID('article', item);
+        const articleByUID: AllDocumentTypes = await client.getByUID('article', item);
         return articleByUID;
     } catch (error) {
         console.log('Something went wrong');

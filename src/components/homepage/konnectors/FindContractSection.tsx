@@ -94,7 +94,7 @@ const SubtitleBoxStyled = styled(Box)(({ theme }) => ({
 | Component
 |--------------------------------------------------------------------------
 */
-const FindContractSection: React.FC<FindContractSectionProps> = ({ children }) => {
+const FindContractSection: React.FC<FindContractSectionProps> = ({  }) => {
     const matchesMobile = useMediaQuery(theme.breakpoints.down('lg'));
     // Render
     //--------------------------------------------------------------------------

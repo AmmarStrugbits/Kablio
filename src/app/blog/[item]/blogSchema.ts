@@ -2416,12 +2416,8 @@ const technicalInterviewGuideForEngineersSchema = () => {
   ]
 }
 
-export interface TopicSchema {
-  tag: string
-  schema: any
-}
 
-export const topicsSchema: TopicSchema[] = [
+export const topicsSchema = [
   {
     tag: 'engineering-design-jobs',
     schema: engineeringDesignJobsSchema(),
@@ -2460,158 +2456,197 @@ export const topicsSchema: TopicSchema[] = [
   },
   {
     tag: 'how-to-become-an-hvac-engineer',
+    
     schema: becomeHvacEngineerSchema(),
   },
   {
     tag: 'civil-engineering-interview-tips',
+    
     schema: civilEngineeringInterviewTipsSchema(),
   },
   {
     tag: 'how-to-become-a-construction-estimator',
+    
     schema: becomeConstructionEstimatorSchema(),
   },
   {
     tag: 'how-to-become-a-health-and-safety-officer',
+    
     schema: healthAndSafetyOfficerSchema(),
   },
   {
     tag: 'how-to-become-a-site-manager',
+    
     schema: becomeSiteManagerSchema(),
   },
   {
     tag: 'construction-project-manager-cover-letter-tips-and-advice',
+    
     schema: constructionProjectManagerCoverLetterTipsAndAdviceSchema(),
   },
   {
     tag: 'how-to-become-a-construction-manager',
+    
     schema: becomeConstructionManagerSchema(),
   },
   {
     tag: 'how-to-become-a-cad-engineer',
+    
     schema: becomeCadEngineerSchema(),
   },
   {
     tag: 'site-manager-cv-guide-with-example',
+    
     schema: siteManagerCvGuideWithExampleSchema(),
   },
   {
     tag: 'electrical-engineer-cv-advice',
+    
     schema: electricalEngineerCvAdviceSchema(),
   },
   {
     tag: 'types-of-civil-engineering',
+    
     schema: typesOfCivilEngineeringSchema(),
   },
   {
     tag: 'quantity-surveyor-cover-letter-tips-and-example',
+    
     schema: quantitySurveyorCoverLetterTipsAndExampleSchema(),
   },
   {
     tag: 'structural-engineer-cv',
+    
     schema: structuralEngineerCvSchema(),
   },
   {
     tag: 'how-to-become-a-civil-engineer',
+    
     schema: becomeACivilEngineerSchema(),
   },
   {
     tag: 'how-to-become-a-solar-panel-installer',
+    
     schema: becomeSolarPanelInstallerSchema(),
   },
   {
     tag: 'civil-engineering-cv-examples-and-advice',
+    
     schema: civilEngineeringCvExamplesAndAdviceSchema(),
   },
   {
     tag: 'what-is-a-bim-manager',
+    
     schema: whatIsBimManagerSchema(),
   },
   {
     tag: 'how-to-become-a-quantity-surveyor',
+    
     schema: becomeQuantitySurveyorSchema(),
   },
   {
     tag: 'how-to-become-a-building-surveyor',
+    
     schema: becomeBuildingSurveyorSchema(),
   },
   {
     tag: 'construction-project-manager-cv-advice-and-example',
+    
     schema: constructionProjectManagerCvAdviceExampleSchema(),
   },
   {
     tag: 'how-to-become-a-wind-turbine-technician',
+    
     schema: becomeWindTurbineTechnicianSchema(),
   },
   {
     tag: 'how-to-become-an-environmental-engineer',
+    
     schema: becomeEnvironmentalEngineerSchema(),
   },
   {
     tag: 'civil-engineering-cover-letter-advice-and-examples',
+    
     schema: civilEngineeringCoverLetterAdviceAndExamplesSchema(),
   },
   {
     tag: 'quantity-surveyor-cv-top-tips',
+    
     schema: quantitySurveyorCvTopTipsSchema(),
   },
   {
     tag: 'engineering-job-interview-tips-for-students-and-recent-grads',
+    
     schema: engineeringJobInterviewTipsForStudentsAndRecentGradsSchema(),
   },
   {
     tag: 'entry-level-engineer-cover-letter-advice',
+    
     schema: entryLevelEngineerCoverLetterAdviceSchema(),
   },
   {
     tag: 'how-to-pass-reasoning-tests',
+    
     schema: passReasoningTestsSchema(),
   },
   {
     tag: 'quantity-surveyor-interview-questions-and-answers',
+    
     schema: quantitySurveyorInterviewQuestionsAndAnswersSchema(),
   },
   {
     tag: 'civil-engineering-interview-questions-and-answers',
+    
     schema: civilEngineeringInterviewQuestionsAndAnswersSchema(),
   },
   {
     tag: 'how-to-optimize-your-university-years-to-get-into-engineering-jobs',
+    
     schema: optimizeYourUniversityYearsToGetIntoEngineeringJobsSchema(),
   },
   {
     tag: 'guide-to-crafting-your-construction-manager-resume',
+    
     schema: guideToCraftingYourConstructionManagerResumeSchema(),
   },
   {
     tag: 'electrical-engineer-interview-questions-answers-and-advice',
+    
     schema: electricalEngineerInterviewQuestionsAnswersAndAdviceSchema(),
   },
   {
     tag: 'how-to-become-an-electrician-without-an-apprenticeship-uk',
+    
     schema: becomeElectricianWithoutAnApprenticeshipUkSchema(),
   },
   {
     tag: 'engineering-assessment-centres-guide',
+    
     schema: engineeringAssessmentCentresGuideSchema(),
   },
   {
     tag: 'how-to-become-a-chartered-surveyor',
+    
     schema: becomeCharteredSurveyorSchema(),
   },
   {
     tag: 'why-become-a-chartered-engineer',
+    
     schema: whyBecomeCharteredEngineerSchema(),
   },
   {
     tag: 'engineering-cover-letter-advice-and-examples',
+    
     schema: engineeringCoverLetterAdviceAndExamplesSchema(),
   },
   {
     tag: 'writing-applications-for-entry-level-engineering-jobs',
+    
     schema: writingApplicationsForEntryLevelEngineeringJobsSchema(),
   },
   {
     tag: 'technical-interview-guide-for-engineers',
+    
     schema: technicalInterviewGuideForEngineersSchema(),
   },
 ]

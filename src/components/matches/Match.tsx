@@ -6,7 +6,7 @@
 | Author: eric@reskue.art
 */
 
-import { Box, styled, keyframes } from '@mui/material'
+import { Box, keyframes, styled } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { useFormContext } from 'react-hook-form'
 
@@ -15,25 +15,24 @@ import Image from 'next/image'
 import SkeletonLeftBorder from '@/assets/images/SkeletonLeftBorder.png'
 import SkeletonRightBorder from '@/assets/images/SkeletonRightBorder.png'
 
-import PreviousButton from '@/components/matches/buttons/PreviousButton'
-import SkipButton from '@/components/matches/buttons/SkipButton'
 import ApplyButton from '@/components/matches/buttons/ApplyButton'
+import PreviousButton from '@/components/matches/buttons/PreviousButton'
 import SaveButton from '@/components/matches/buttons/SaveButton'
+import SkipButton from '@/components/matches/buttons/SkipButton'
 import JobPost from '@/components/matches/match/JobPost'
 import NoMatchFound from '@/components/matches/NoMatchFound'
 import SearchPreferencesQuestion from '@/components/matches/searchPreferencesQuestion/SearchPreferencesQuestion'
 import LoadingAnimation from '@/shared/components/LoadingAnimation'
 
-import { SearchPreferencesDataForm } from '@/shared/interfaces/SearchPreference.interfaces'
-import { JobPostClass, JobPostDto } from '@/shared/interfaces/JobPostClass'
+import { keysToCheck } from '@/shared/const/NavLinksSidebarSearchPreferences'
 import { Action, Status } from '@/shared/enum/JobPost.enum'
 import { FindPaginateResponseMeta } from '@/shared/interfaces/FindPaginateResponseMeta.interface'
-import { keysToCheck } from '@/shared/const/NavLinksSidebarSearchPreferences'
+import { JobPostClass, JobPostDto } from '@/shared/interfaces/JobPostClass'
+import { SearchPreferencesDataForm } from '@/shared/interfaces/SearchPreference.interfaces'
 
 import { useSearchPreferenceContext } from '@/contexts/searchPreferenceContext'
-import { onSubmitPreferencesMatches, transformUserPreferencesToFormValues } from '@/services/searchpreferences/searchPreferences.services'
 import { findEmptyArrayKeys, getJobsStatus, getMatches, toggleJobPostStatus } from '@/services/matches/match.services'
-import { create } from 'domain'
+import { onSubmitPreferencesMatches, transformUserPreferencesToFormValues } from '@/services/searchpreferences/searchPreferences.services'
 
 /*
 |--------------------------------------------------------------------------
@@ -241,7 +240,7 @@ const MatchPage: React.FC<MatchPageProps> = () => {
             setFirstFetch(false);
         };
         fetchJobPosts();
-    }, [page]);
+    }, [page, firstFetch]);
 
     /**
        * Check if currentJobPost is present in all 3 element of jobpostStatus
@@ -267,7 +266,7 @@ const MatchPage: React.FC<MatchPageProps> = () => {
             const formValues = transformUserPreferencesToFormValues(userPreferences, locationsContext.items, sectorsContext.items, jobsContext.items);
             reset(formValues);
         }
-    }, [isLoading, userPreferences, sectorsContext, locationsContext, jobsContext]);
+    }, [isLoading, userPreferences, sectorsContext, locationsContext, jobsContext, reset]);
 
     /**
    * Track skipped jobPost to display search preference question if needed.
@@ -280,7 +279,7 @@ const MatchPage: React.FC<MatchPageProps> = () => {
                 setShowSearchPreference(true);
             }
         }
-    }, [skippedJobsCount]);
+    }, [skippedJobsCount, getValues]);
 
     //*********************Handlers Job Post Interactions*********************
 

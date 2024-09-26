@@ -17,12 +17,12 @@ import { Box, styled } from '@mui/material';
 */
 
 interface ContainerProps {
-    iconPosition: 'top' | 'left' | 'right' | 'bottom';
+    iconposition: 'top' | 'left' | 'right' | 'bottom';
     width: number;
 }
 
 interface ImageSize {
-    iconWidth: number;
+    iconwidth: number;
 }
 
 export interface InfoCardWithIconHorizontalProps extends ContainerProps, ImageSize {
@@ -66,15 +66,15 @@ const BackgroundGradient = styled(Box)<{ backgroundColor: string }>(({ theme, ba
     },
 }));
 
-const Container = styled(Box)<ContainerProps>(({ theme, iconPosition, width }) => ({
+const Container = styled(Box)<ContainerProps>(({ theme, iconposition, width }) => ({
     display: 'flex',
-    flexDirection: iconPosition === 'top' ? 'column' :
-        iconPosition === 'bottom' ? 'column-reverse' :
-            iconPosition === 'left' ? 'row' :
+    flexDirection: iconposition === 'top' ? 'column' :
+        iconposition === 'bottom' ? 'column-reverse' :
+            iconposition === 'left' ? 'row' :
                 'row-reverse',
     alignItems: 'center',
     justifyContent: 'center',
-    textAlign: iconPosition === 'top' || iconPosition === 'bottom' ? 'center' : 'left',
+    textAlign: iconposition === 'top' || iconposition === 'bottom' ? 'center' : 'left',
     width: `${width}rem`,
     height: '250px',
     gap: ' 2rem',
@@ -133,8 +133,8 @@ const Text = styled('h4')(({ theme }) => ({
     },
 }));
 
-const StyledImage = styled(Image)<ImageSize>(({ iconWidth }) => ({
-    maxWidth: `${iconWidth}rem`,
+const StyledImage = styled(Image)<ImageSize>(({ iconwidth }) => ({
+    maxWidth: `${iconwidth}rem`,
     height: `auto`,
     position: 'relative',
     zIndex: 1,
@@ -147,7 +147,7 @@ const StyledImage = styled(Image)<ImageSize>(({ iconWidth }) => ({
 */
 
 const InfoCardWithIconHorizontal: React.FC<InfoCardWithIconHorizontalProps> = (props: InfoCardWithIconHorizontalProps) => {
-    const { icon, iconPosition, backgroundColor, title, text, iconWidth, width } = props
+    const { icon, iconposition, backgroundColor, title, text, iconwidth, width } = props
 
     // Render
     //--------------------------------------------------------------------------
@@ -156,14 +156,14 @@ const InfoCardWithIconHorizontal: React.FC<InfoCardWithIconHorizontalProps> = (p
         // sx={{ height: "350px" }}
         >
             <BackgroundGradient backgroundColor={backgroundColor}>
-                <Container iconPosition={iconPosition} width={width} >
+                <Container iconposition={iconposition} width={width} >
                     <Box
                         sx={{
                             display: 'flex',
                             justifyContent: 'center',
                             alignContent: 'center'
                         }}>
-                        <StyledImage src={icon} alt="Icon" iconWidth={iconWidth} />
+                        <StyledImage src={icon} alt="Icon" iconwidth={iconwidth} />
                     </Box>
                     <TextZone>
                         <Title>{title}</Title>

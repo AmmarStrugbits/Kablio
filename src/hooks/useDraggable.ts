@@ -25,7 +25,7 @@ export const useDraggable = ({ initialAngle }: { initialAngle: number }) => {
     const dx = center + radius * Math.cos(radian);
     const dy = center + radius * Math.sin(radian);
     setOffset({ dx, dy });
-  }, [node]);
+  }, [node, angle]);
 
   const handleMouseDown = React.useCallback(
     (e: MouseEvent) => {
@@ -140,7 +140,7 @@ export const useDraggable = ({ initialAngle }: { initialAngle: number }) => {
       node.removeEventListener("mousedown", handleMouseDown);
       node.removeEventListener("touchstart", handleTouchStart);
     };
-  }, [node, dx, dy]);
+  }, [node, dx, dy, handleMouseDown, handleTouchStart]);
 
   return [ref, dx, dy, angle];
 };

@@ -73,19 +73,19 @@ const HomeLocation = () => {
          * Updates the selected regions list.
          * @param country - The selected country.
          */
-    const updateSelectedRegions = useCallback((country: string) => {
-        const newSelectedRegions = locationsData
-            .filter(region => region.group.name === country)
-            .map(region => region.id);
+    // const updateSelectedRegions = useCallback((country: string) => {
+    //     const newSelectedRegions = locationsData
+    //         .filter(region => region.group.name === country)
+    //         .map(region => region.id);
 
-        const { [country]: removed, ...rest } = selectedRegions;
+    //     const { [country]: removed, ...rest } = selectedRegions;
 
-        const updatedSelectedRegions = newSelectedRegions.length > 0
-            ? { ...rest, [country]: newSelectedRegions }
-            : rest;
+    //     const updatedSelectedRegions = newSelectedRegions.length > 0
+    //         ? { ...rest, [country]: newSelectedRegions }
+    //         : rest;
 
-        return updatedSelectedRegions;
-    }, [locationsData, selectedRegions]);
+    //     return updatedSelectedRegions;
+    // }, [locationsData, selectedRegions]);
 
     /**
      * Handles the selection of a country and add all regions to the selected list.
@@ -104,7 +104,7 @@ const HomeLocation = () => {
         setSelectedCountries(newselectedCountrys);
         setValue("countries", newselectedCountrys, { shouldValidate: true });
         if (selectedCountries.includes(country)) {
-            const { [country]: removed, ...rest } = selectedRegions;
+            const { ...rest } = selectedRegions;
             setSelectedRegions(rest);
             setValue("regions", rest, { shouldValidate: true });
         } else {
@@ -112,7 +112,7 @@ const HomeLocation = () => {
             // setSelectedRegions(updatedSelectedRegions);
             // setValue("regions", updatedSelectedRegions, { shouldValidate: true });
         }
-    }, [selectedCountries, setSelectedCountries, updateSelectedRegions]);
+    }, [selectedCountries, setSelectedCountries, selectedRegions, setValue]);
 
     /**
      * Handles the selection of regions.
@@ -129,7 +129,7 @@ const HomeLocation = () => {
         }
         setSelectedRegions(newSelectedRegions);
         setValue("regions", newSelectedRegions, { shouldValidate: true });
-    }, [selectedRegions, setSelectedRegions]);
+    }, [selectedRegions, setSelectedRegions, setValue]);
 
     /**
      * Deselect all options for a selected country.
@@ -141,7 +141,7 @@ const HomeLocation = () => {
         };
         setSelectedRegions(updatedSelectedRegions);
         setValue("regions", updatedSelectedRegions, { shouldValidate: true });
-    }, [selectedRegions, setSelectedRegions]);
+    }, [selectedRegions, setSelectedRegions, setValue]);
 
     /**
      * Renders the options list for each selected country.

@@ -82,7 +82,7 @@ const TargetSectors = () => {
             .filter(subsector => subsector.group.name === sector)
             .map(subsector => subsector.id);
 
-        const { [sector]: removed, ...rest } = selectedSubSectors;
+        const { ...rest } = selectedSubSectors;
 
         const updatedSelectedSubSectors = newSelectedSubSectors.length > 0
             ? { ...rest, [sector]: newSelectedSubSectors }
@@ -108,7 +108,7 @@ const TargetSectors = () => {
         setSelectedSectors(newSelectedSectors);
         setValue("sectors", newSelectedSectors, { shouldValidate: true });
         if (selectedSectors.includes(sector)) {
-            const { [sector]: removed, ...rest } = selectedSubSectors;
+            const { ...rest } = selectedSubSectors;
             setSelectedSubSectors(rest);
             setValue("subSectors", rest, { shouldValidate: true });
         } else {
@@ -116,7 +116,7 @@ const TargetSectors = () => {
             setSelectedSubSectors(updatedSelectedSubSectors);
             setValue("subSectors", updatedSelectedSubSectors, { shouldValidate: true });
         }
-    }, [selectedSectors, setSelectedSectors, updateSelectedSubSectors]);
+    }, [selectedSectors, setSelectedSectors, updateSelectedSubSectors, setSelectedSubSectors, setValue, selectedSubSectors]);
 
 
     /**
@@ -134,7 +134,7 @@ const TargetSectors = () => {
         }
         setSelectedSubSectors(newSelectedSubSectors);
         setValue("subSectors", newSelectedSubSectors, { shouldValidate: true });
-    }, [selectedSubSectors, setSelectedSubSectors]);
+    }, [selectedSubSectors, setSelectedSubSectors, setValue]);
 
     /**
      * Deselect all options for a selected sector.
@@ -146,7 +146,7 @@ const TargetSectors = () => {
         };
         setSelectedSubSectors(updatedSelectedSubSectors);
         setValue("subSectors", updatedSelectedSubSectors, { shouldValidate: true });
-    }, [selectedSubSectors, setSelectedSubSectors]);
+    }, [selectedSubSectors, setSelectedSubSectors, setValue]);
 
     /**
      * Renders the options list for each selected sector.

@@ -2,8 +2,14 @@
 
 import FooterSection from "@/components/blog/FooterSection";
 import HomepageLayout from "@/components/homepage/layout/layout";
+import { ReactNode } from "react";
 
-export default function AccountLayout(props: any) {
+type Props = {
+    children: ReactNode;
+};
+
+
+export default function AccountLayout(props: Props) {
     const { children } = props;
     return (<>
         <HomepageLayout>

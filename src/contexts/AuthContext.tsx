@@ -2,7 +2,6 @@
 
 import { User } from '@/shared/interfaces/User.interfaces';
 import React, { Dispatch, SetStateAction, createContext, useEffect, useState } from 'react';
-import Cookies from "js-cookie";
 
 interface AuthContextType {
   user: User | null;

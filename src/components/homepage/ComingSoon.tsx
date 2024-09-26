@@ -42,7 +42,7 @@ const ComingSoonBoxStyled = styled(Box)(({ theme }) => ({
 | Component
 |--------------------------------------------------------------------------
 */
-const ComingSoon: React.FC<ComingSoonProps> = ({ children }) => {
+const ComingSoon: React.FC<ComingSoonProps> = ({  }) => {
 
     // Render
     //--------------------------------------------------------------------------

@@ -64,8 +64,8 @@ const BenefitsSection: React.FC = () => {
                     text={<span>Always same format{matchesMobile ? " " : <br />}+ we point out missing information</span>}
                     backgroundColor="#00FBDF"
                     icon={HonestJobDescriptions}
-                    iconPosition={matchesMobile ? "bottom" : "right"}
-                    iconWidth={matchesMobile ? 15 : 18.5}
+                    iconposition={matchesMobile ? "bottom" : "right"}
+                    iconwidth={matchesMobile ? 15 : 18.5}
                     width={51}
                 />
             </Box>
@@ -74,9 +74,9 @@ const BenefitsSection: React.FC = () => {
                     title="AI-power your cv + Profile"
                     text={<span>Easily generate content with AI + other tools</span>}
                     icon={AIPowerForCV}
-                    iconPosition={matchesMobile ? "bottom" : "left"}
+                    iconposition={matchesMobile ? "bottom" : "left"}
                     backgroundColor="#DCFFD4"
-                    iconWidth={matchesMobile ? 6.85 : 12}
+                    iconwidth={matchesMobile ? 6.85 : 12}
                     width={50}
                 />
             </Box>

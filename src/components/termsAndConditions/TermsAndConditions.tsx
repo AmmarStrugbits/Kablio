@@ -63,7 +63,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
 | Component
 |--------------------------------------------------------------------------
 */
-const TermsAndConditions: React.FC<TermsAndConditionsProps> = ({ children }) => {
+const TermsAndConditions: React.FC<TermsAndConditionsProps> = ({  }) => {
     const matchesMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     // Render

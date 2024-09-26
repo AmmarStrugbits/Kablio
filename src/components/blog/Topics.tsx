@@ -55,7 +55,7 @@ const TopicsBoxStyled = styled(Box)(({ theme }) => ({
 
 
 
-const BreadcrumbBoxStyled = styled(Box)(({ theme }) => ({
+const BreadcrumbBoxStyled = styled(Box)(({  }) => ({
     display: "flex",
     alignItems: "center",
     gap: "0.5rem",
@@ -64,7 +64,7 @@ const BreadcrumbBoxStyled = styled(Box)(({ theme }) => ({
     fontWeight: '500',
 }))
 
-const TitleBoxStyled = styled(Box)(({ theme }) => ({
+const TitleBoxStyled = styled(Box)(({  }) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -107,7 +107,7 @@ const TopicTypographyStyled = styled('h1')(({ theme }) => ({
     },
 }));
 
-const ArticleCardContainerStyled = styled(Box)(({ theme }) => ({
+const ArticleCardContainerStyled = styled(Box)(({  }) => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
@@ -144,7 +144,7 @@ const Topics: React.FC<TopicsProps> = (props: TopicsProps) => {
                         const ratingA = parseInt(a.rating || '0', 10);
                         const ratingB = parseInt(b.rating || '0', 10);
                         return ratingB - ratingA;
-                    }).map((article: any) => (
+                    }).map((article) => (
                         <Box key={article.uid} onClick={() => { }}
                             sx={{
                                 cursor: 'pointer',

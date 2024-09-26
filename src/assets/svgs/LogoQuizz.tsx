@@ -1,5 +1,7 @@
 import * as React from "react"
-const LogoQuizz = (props: any) => (
+interface LogoQuizzProps extends React.SVGProps<SVGSVGElement> { }
+
+const LogoQuizz: React.FC<LogoQuizzProps> = (props) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width={198}

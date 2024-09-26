@@ -52,7 +52,7 @@ const JobLevelSeeking = ({ setIsValid }: JobLevelProps) => {
     useEffect(() => {
         const isEmpty = selectedJobLevels.length === 0;
         setIsValid(!isEmpty);
-    }, [selectedJobLevels]);
+    }, [selectedJobLevels, setIsValid]);
 
     /**
      * Handles the selection of a job level.

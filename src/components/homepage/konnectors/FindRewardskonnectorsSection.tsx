@@ -11,14 +11,13 @@ import React from 'react'
 import { Box, styled, useMediaQuery } from '@mui/material'
 
 import StepOne from '@/assets/images/StepOne.png'
-import StepTwo from '@/assets/images/StepTwo.png'
 import StepThree from '@/assets/images/StepThree.png'
-import StepFour from '@/assets/images/StepFour.png'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import StepTwo from '@/assets/images/StepTwo.png'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
+import { theme } from '@/MUI/Theme'
 import Image from 'next/image'
 import Link from 'next/link'
-import { theme } from '@/MUI/Theme'
 import ComingSoon from '../ComingSoon'
 /*
 |--------------------------------------------------------------------------
@@ -80,17 +79,17 @@ const StepContainerTitleSubtitle = styled(Box)(({ theme }) => ({
     },
 }))
 
-const SubtitleBoxStyled = styled(Box)(({ theme }) => ({
-    color: "white",
-    fontWeight: "400",
-    fontSize: "1.25rem",
-    lineHeight: "1.8rem",
-    textAlign: 'center',
-    fontFamily: "Roboto",
-    [theme.breakpoints.down('lg')]: {
-        fontSize: '1.125rem',
-    },
-}))
+// const SubtitleBoxStyled = styled(Box)(({ theme }) => ({
+//     color: "white",
+//     fontWeight: "400",
+//     fontSize: "1.25rem",
+//     lineHeight: "1.8rem",
+//     textAlign: 'center',
+//     fontFamily: "Roboto",
+//     [theme.breakpoints.down('lg')]: {
+//         fontSize: '1.125rem',
+//     },
+// }))
 const StepContainerBoxStyled = styled(Box)(({ theme }) => ({
     display: "flex",
     flexDirection: "row",

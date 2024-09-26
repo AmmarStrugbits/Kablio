@@ -95,7 +95,7 @@ const SubtitleBoxStyled = styled(Box)(({ theme }) => ({
 | Component
 |--------------------------------------------------------------------------
 */
-const ReferralLink: React.FC<ReferralLinkProps> = ({ children }) => {
+const ReferralLink: React.FC<ReferralLinkProps> = ({  }) => {
     const matchesMobile = useMediaQuery(theme.breakpoints.down('lg'));
     // Render
     //--------------------------------------------------------------------------

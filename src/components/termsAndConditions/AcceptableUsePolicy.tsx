@@ -6,11 +6,9 @@
 | Author: eric@reskue.art
 */
 
-import { Box, Typography, useMediaQuery } from '@mui/material'
-import React from 'react'
-import { styled } from '@mui/material'
 import { theme } from '@/MUI/Theme'
-import HomepageLayout from '@/components/homepage/layout/layout'
+import { Box, styled, Typography, useMediaQuery } from '@mui/material'
+import React from 'react'
 
 /*
 |--------------------------------------------------------------------------
@@ -47,7 +45,7 @@ const StyledText = styled(Typography)({
 | Component
 |--------------------------------------------------------------------------
 */
-const AcceptableUsePolicy: React.FC<AcceptableUsePolicyProps> = ({ children }) => {
+const AcceptableUsePolicy: React.FC<AcceptableUsePolicyProps> = ({  }) => {
     const matchesMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     // Render

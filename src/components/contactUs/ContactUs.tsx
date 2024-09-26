@@ -37,7 +37,7 @@ export interface ContactUsProps //extends buttonProps
 | Component
 |--------------------------------------------------------------------------
 */
-const ContactUs: React.FC<ContactUsProps> = ({ children }) => {
+const ContactUs: React.FC<ContactUsProps> = ({  }) => {
     const methods = useForm<TalkToUsData>();
 
     // Render

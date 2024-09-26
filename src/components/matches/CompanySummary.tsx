@@ -6,21 +6,13 @@
 | Author: eric@reskue.art
 */
 
-import { Calendar } from '@/assets/svgs/Calendar'
-import { Location } from '@/assets/svgs/Location'
-import { MoneyBill } from '@/assets/svgs/MoneyBill'
-import { MountainFlag } from '@/assets/svgs/MountainFlag'
-import { PaperContract } from '@/assets/svgs/PaperContract'
-import { Target } from '@/assets/svgs/Target'
-import { Box, Typography, useMediaQuery } from '@mui/material'
-import React from 'react'
-import { styled } from '@mui/material'
 import { BookMark } from '@/assets/svgs/Bookmark'
+import { SquareZoomIn } from '@/assets/svgs/SquareZoomIn'
 import { Workers } from '@/assets/svgs/Workers'
 import { ZoomIn } from '@/assets/svgs/ZoomIn'
 import { JobPostClass } from '@/shared/interfaces/JobPostClass'
-import { theme } from '@/MUI/Theme'
-import { SquareZoomIn } from '@/assets/svgs/SquareZoomIn'
+import { Box, styled, Typography } from '@mui/material'
+import React from 'react'
 import InfoNotAvailable from './InfoNotAvailable'
 import JobSpecialisms from './JobSpecialisms'
 

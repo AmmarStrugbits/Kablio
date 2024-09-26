@@ -78,9 +78,9 @@ const BenefitsSection: React.FC = () => {
                     title="MAKE YOUR RECRUITER BRAND POP"
                     text={<span>Make noise.<br /> Be the recruiter everybody wants to work with.</span>}
                     icon={MakeBrandPop}
-                    iconPosition={matchesMobile ? "bottom" : "left"}
+                    iconposition={matchesMobile ? "bottom" : "left"}
                     backgroundColor="#DCFFD4"
-                    iconWidth={matchesMobile ? 6.25 : 10}
+                    iconwidth={matchesMobile ? 6.25 : 10}
                     width={50}
                 />
 
@@ -89,8 +89,8 @@ const BenefitsSection: React.FC = () => {
                     text={<span>Easily generate your profile and technical job descriptions</span>}
                     backgroundColor="#00FBDF"
                     icon={AIPowerForCV}
-                    iconPosition={matchesMobile ? "bottom" : "right"}
-                    iconWidth={matchesMobile ? 6.875 : 12}
+                    iconposition={matchesMobile ? "bottom" : "right"}
+                    iconwidth={matchesMobile ? 6.875 : 12}
                     width={50}
                 />
 

@@ -1,6 +1,6 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 import Cookies from 'js-cookie';
-import { ComponentType, ReactElement, useContext, useEffect, useState } from 'react';
+import { ComponentType, ReactElement, useContext, useEffect, useState, useCallback } from 'react';
 import LoadingAnimation from '@/shared/components/LoadingAnimation';
 import { apiAuth, apiAuthRefreshToken } from '@/services/axios/axios.interceptors';
 import { AuthContext } from '@/contexts/AuthContext';
@@ -25,7 +25,7 @@ export function withAuth<T>(Component: ComponentType<T>) {
         const router = useRouter();
         const searchParams = useSearchParams();
 
-        const handleAuthTokens = () => {
+        const handleAuthTokens = useCallback(() => {
             const accessToken = searchParams.get('accessToken');
             const refreshToken = searchParams.get('refreshToken');
             const TFARequired = searchParams.get('TFARequired');
@@ -39,9 +39,9 @@ export function withAuth<T>(Component: ComponentType<T>) {
 
             const newUrl = window.location.pathname;
             window.history.replaceState({}, '', newUrl);
-        };
+        }, [searchParams]);
 
-        async function fetchAndSetUser() {
+        const fetchAndSetUser = useCallback(async () => {
             try {
                 const accessToken = Cookies.get('accessToken');
                 if (accessToken) {
@@ -67,8 +67,7 @@ export function withAuth<T>(Component: ComponentType<T>) {
                 Cookies.remove('refreshToken');
                 router.push('/auth/login');
             }
-        };
-
+        }, [router, setUser]);
 
         useEffect(() => {
             const authenticate = async () => {
@@ -81,11 +80,11 @@ export function withAuth<T>(Component: ComponentType<T>) {
                 }
             };
             authenticate();
-        }, [router]);
+        }, [router, fetchAndSetUser]);
 
         useEffect(() => {
             handleAuthTokens();
-        }, [searchParams]);
+        }, [searchParams, handleAuthTokens]);
 
         if (isLoading) {
             return <LoadingAnimation />;

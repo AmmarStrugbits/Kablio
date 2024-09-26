@@ -10,12 +10,18 @@ import { CacheProvider } from '@emotion/react';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { theme } from './Theme';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 
 // This implementation is from emotion-js
 // https://github.com/emotion-js/emotion/issues/2928#issuecomment-1319747902
 // More info here: https://mui.com/material-ui/guides/next-js-app-router/
-export default function ThemeRegistry(props: any) {
+
+type Props = {
+    options: { key: string }
+    children: ReactNode
+}
+
+export default function ThemeRegistry(props: Props) {
     const { options, children } = props;
 
     const [{ cache, flush }] = useState(() => {

@@ -58,7 +58,7 @@ const JobSector = ({ setIsValid }: JobSectorProps) => {
             }
         };
         fetchData();
-    }, []);
+    }, [setAvailableSectors, setSectorsData]);
 
     useEffect(() => {
         const isEmpty = !Object.keys(selectedSubSectors).some(key => {
@@ -66,7 +66,7 @@ const JobSector = ({ setIsValid }: JobSectorProps) => {
             return Array.isArray(values) && values.some(value => value.trim().length > 0);
         });
         setIsValid(!isEmpty);
-    }, [selectedSubSectors]);
+    }, [selectedSubSectors, setIsValid]);
 
     /**
      * Updates the selected subsectors list.
@@ -77,7 +77,7 @@ const JobSector = ({ setIsValid }: JobSectorProps) => {
             .filter(subsector => subsector.group.name === sector)
             .map(subsector => subsector.id);
 
-        const { [sector]: removed, ...rest } = selectedSubSectors;
+        const { ...rest } = selectedSubSectors;
 
         const updatedSelectedSubSectors = newSelectedSubSectors.length > 0
             ? { ...rest, [sector]: newSelectedSubSectors }
@@ -103,13 +103,13 @@ const JobSector = ({ setIsValid }: JobSectorProps) => {
         setSelectedSectors(newSelectedSectors);
 
         if (selectedSectors.includes(sector)) {
-            const { [sector]: removed, ...rest } = selectedSubSectors;
+            const { ...rest } = selectedSubSectors;
             setSelectedSubSectors(rest);
         } else {
             const updatedSelectedSubSectors = updateSelectedSubSectors(sector);
             setSelectedSubSectors(updatedSelectedSubSectors);
         }
-    }, [selectedSectors, setSelectedSectors, updateSelectedSubSectors]);
+    }, [selectedSectors, setSelectedSectors, updateSelectedSubSectors, selectedSubSectors, setSelectedSubSectors]);
 
 
     /**

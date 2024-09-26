@@ -14,6 +14,7 @@ import { SliceZone } from '@prismicio/react';
 import WhatToReadNext from './WhatToReadNext';
 import FooterArticle from './FooterArticle';
 import { ArticleBoxStyled, AuthorBox, Divider, MainArticleBoxStyled, SubHeaderBoxStyled } from './ArticleStyles';
+import Image from 'next/image';
 /*
 |--------------------------------------------------------------------------
 | Contracts
@@ -21,8 +22,8 @@ import { ArticleBoxStyled, AuthorBox, Divider, MainArticleBoxStyled, SubHeaderBo
 */
 export interface ArticleProps //extends buttonProps
 {
-    articlesTyTag: TopicArticleDataOverview[]
-    articles: AllDocumentTypes
+    articlesByTag: TopicArticleDataOverview[]
+    articles: AllDocumentTypes 
     tag: string
 }
 export interface ArticleData extends ArticleDataOverview {
@@ -51,7 +52,7 @@ export interface TopicArticleDataOverview {
 |--------------------------------------------------------------------------
 */
 const Article: React.FC<ArticleProps> = (props: ArticleProps) => {
-    const { articlesTyTag, articles, tag } = props
+    const { articlesByTag, articles } = props
 
     // Render
     //--------------------------------------------------------------------------
@@ -60,14 +61,15 @@ const Article: React.FC<ArticleProps> = (props: ArticleProps) => {
             <HeaderArticle article={articles} />
             <MainArticleBoxStyled>
                 <SubHeaderBoxStyled>
-                    {/* <Image
+                    <Image
                         src={articles.data.article_main_image.url || DefaultArticleMainImage}
                         alt={''}
                         width={articles.data.article_main_image.dimensions?.width}
                         height={articles.data.article_main_image.dimensions?.height}
-                        objectFit="cover"
-                        layout="fixed" /> */}
-                    <img
+                        layout="fixed"
+                        style={{ objectFit: 'cover' }}
+                        loading={'eager'} />
+                    {/* <img
                         src={articles.data.article_main_image.url || DefaultArticleMainImage.src}
                         alt={''}
                         width={articles.data.article_main_image.dimensions?.width}
@@ -75,7 +77,7 @@ const Article: React.FC<ArticleProps> = (props: ArticleProps) => {
                         style={{
                             objectFit: 'cover',
                         }}
-                    />
+                    /> */}
                     <Divider></Divider>
                     <AuthorBox>
                         <AuthorSpace
@@ -102,7 +104,7 @@ const Article: React.FC<ArticleProps> = (props: ArticleProps) => {
                 </Box>
                 <FooterArticle articlesTags={articles.tags} />
             </MainArticleBoxStyled>
-            <WhatToReadNext articlesTyTag={articlesTyTag} />
+            <WhatToReadNext articlesByTag={articlesByTag} />
         </ArticleBoxStyled >
     )
 }

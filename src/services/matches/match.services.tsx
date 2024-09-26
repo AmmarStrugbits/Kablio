@@ -16,7 +16,6 @@ import { UserJobPostsStatus } from '@/components/matches/Match';
 | Contracts
 |--------------------------------------------------------------------------
 */
-
 export function findEmptyArrayKeys(obj: Record<string, any>, keysToCheck: string[]): string[] {
     return keysToCheck.filter(key => Array.isArray(obj[key]) && obj[key].length === 0);
 }

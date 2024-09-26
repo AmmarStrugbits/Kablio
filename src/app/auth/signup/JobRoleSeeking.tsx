@@ -66,7 +66,7 @@ const JobRoleSeeking = ({ setIsValid }: JobRoleProps) => {
             }
         };
         fetchData();
-    }, []);
+    }, [setAvailableWorkFields, setjobRolesData]);
 
 
     useEffect(() => {
@@ -75,25 +75,25 @@ const JobRoleSeeking = ({ setIsValid }: JobRoleProps) => {
             return Array.isArray(values) && values.some(value => value.trim().length > 0);
         });
         setIsValid(!isEmpty);
-    }, [selectedJobRoles]);
+    }, [selectedJobRoles, setIsValid]);
 
     /**
      * Updates the selected JobRoles list.
      * @param workField - The selected workField.
      */
-    const updateSelectedJobRoles = useCallback((workfield: string) => {
-        const newSelectedJobRoles = jobRolesData
-            .filter(jobrole => jobrole.group.name === workfield)
-            .map(jobrole => jobrole.id);
+    // const updateSelectedJobRoles = useCallback((workfield: string) => {
+    //     const newSelectedJobRoles = jobRolesData
+    //         .filter(jobrole => jobrole.group.name === workfield)
+    //         .map(jobrole => jobrole.id);
 
-        const { [workfield]: removed, ...rest } = selectedJobRoles;
+    //     const { [workfield]: removed, ...rest } = selectedJobRoles;
 
-        const updatedSelectedJobRoles = newSelectedJobRoles.length > 0
-            ? { ...rest, [workfield]: newSelectedJobRoles }
-            : rest;
+    //     const updatedSelectedJobRoles = newSelectedJobRoles.length > 0
+    //         ? { ...rest, [workfield]: newSelectedJobRoles }
+    //         : rest;
 
-        return updatedSelectedJobRoles;
-    }, [jobRolesData, selectedJobRoles]);
+    //     return updatedSelectedJobRoles;
+    // }, [jobRolesData, selectedJobRoles]);
 
     /**
      * Handles the selection of a work field.
@@ -112,13 +112,13 @@ const JobRoleSeeking = ({ setIsValid }: JobRoleProps) => {
         setSelectedWorkFields(newSelectedWorkFields);
 
         if (selectedWorkFields.includes(workField)) {
-            const { [workField]: removed, ...rest } = selectedJobRoles;
+            const { ...rest } = selectedJobRoles;
             setSelectedJobRoles(rest);
         } else {
             // const updatedSelectedJobRoles = updateSelectedJobRoles(workField);
             // setSelectedJobRoles(updatedSelectedJobRoles);
         }
-    }, [selectedWorkFields, setSelectedWorkFields, updateSelectedJobRoles]);
+    }, [selectedWorkFields, setSelectedWorkFields, selectedJobRoles, setSelectedJobRoles]);
 
 
     /**

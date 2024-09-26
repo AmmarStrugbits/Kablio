@@ -18,7 +18,7 @@ export const sendEmail = async (data: TalkToUsData) => {
         }
         messageBody += `Message:\n${data.message}`;
 
-        const response = await client.sendEmail({
+        await client.sendEmail({
             From: 'hi@kablio.com',
             To: 'hi@kablio.com',
             Subject: 'New message from Kablio',

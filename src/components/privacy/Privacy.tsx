@@ -49,7 +49,7 @@ const StyledText = styled(Typography)({
 | Component
 |--------------------------------------------------------------------------
 */
-const Privacy: React.FC<PrivacyProps> = ({ children }) => {
+const Privacy: React.FC<PrivacyProps> = ({ }) => {
     const matchesMobile = useMediaQuery(theme.breakpoints.down('md'));
 
 

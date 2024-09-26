@@ -1,11 +1,11 @@
 'use client'
-import { useRouter } from 'next/navigation';
-import Cookies from 'js-cookie';
-import { ComponentType, ReactElement, ReactNode, useContext, useEffect, useState } from 'react';
-import LoadingAnimation from '@/shared/components/LoadingAnimation';
 import { apiAuth, apiAuthRefreshToken } from '@/services/axios/axios.interceptors';
+import LoadingAnimation from '@/shared/components/LoadingAnimation';
 import { setAuthTokenCookies } from '@/utils/cookies';
-import { AuthContext } from '@/contexts/AuthContext';
+import Cookies from 'js-cookie';
+import { useRouter } from 'next/navigation';
+import { ComponentType, ReactElement, ReactNode, useEffect, useState } from 'react';
+// import { AuthContext } from '@/contexts/AuthContext';
 
 type WithPublicProps = {
     children?: ReactNode;
@@ -25,14 +25,14 @@ async function checkIfAuthenticated(): Promise<boolean> {
 export function withPublic<T extends WithPublicProps>(Component: ComponentType<T>) {
     return function WithPublic(props: T): ReactElement | null {
         const router = useRouter();
-        const { user, setUser } = useContext(AuthContext);
+        // const { user, setUser } = useContext(AuthContext);
         const [isLoading, setIsLoading] = useState(true);
 
         async function fetchAndSetUser() {
             const accessToken = Cookies.get('accessToken');
             if (accessToken) {
                 const res = await apiAuth.get('/user');
-                setUser(res.data);
+                // setUser(res.data);
                 window.localStorage.setItem('user', JSON.stringify(res.data));
                 return;
             }
@@ -42,7 +42,7 @@ export function withPublic<T extends WithPublicProps>(Component: ComponentType<T
                 const authTokens = await apiAuthRefreshToken.get('/auth/user/refresh');
                 setAuthTokenCookies(authTokens);
                 const res = await apiAuth.get('/user');
-                setUser(res.data);
+                // setUser(res.data);
                 window.localStorage.setItem('user', JSON.stringify(res.data));
                 return;
             }

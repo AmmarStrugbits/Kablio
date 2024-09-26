@@ -6,16 +6,14 @@
 | Author: eric@reskue.art
 */
 
-import React, { useCallback, useEffect } from 'react'
-import { FormProvider, useForm } from 'react-hook-form'
 import { UserLoginData } from '@/shared/interfaces/User.interfaces'
-import { Box, styled } from '@mui/system'
 import { Button, Divider, Typography } from '@mui/material'
+import { Box, styled } from '@mui/system'
+import React, { useCallback } from 'react'
+import { FormProvider, useForm } from 'react-hook-form'
 
-import { useAuth } from '@/hooks/useAuth'
-import { useRouter } from 'next/navigation';
-import { withPublic } from '@/hoc/WithPublic'
 import LoginForm from '@/app/auth/login/LoginForm'
+import { withPublic } from '@/hoc/WithPublic'
 
 /*
 |--------------------------------------------------------------------------
@@ -128,7 +126,7 @@ const LinkStyled = styled('a')(() => ({
 | Component
 |--------------------------------------------------------------------------
 */
-const Login: React.FC<LoginProps> = ({ children }) => {
+const Login: React.FC<LoginProps> = ({ }) => {
 
     const methods = useForm<UserLoginData>();
 

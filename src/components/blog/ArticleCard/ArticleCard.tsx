@@ -55,16 +55,18 @@ const TitleBoxStyled = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down('lg')]: {},
   [theme.breakpoints.down('md')]: {},
 }))
-const TruncatedTypography = styled(Typography)(({ theme }) => ({
-  fontFamily: 'Roboto',
-  fontSize: '1.375rem',
-  fontWeight: '600',
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  display: '-webkit-box',
-  WebkitLineClamp: 4, // Limite le nombre de lignes à afficher
-  WebkitBoxOrient: 'vertical',
-}))
+
+// const TruncatedTypography = styled(Typography)(({ theme }) => ({
+//   fontFamily: 'Roboto',
+//   fontSize: '1.375rem',
+//   fontWeight: '600',
+//   overflow: 'hidden',
+//   textOverflow: 'ellipsis',
+//   display: '-webkit-box',
+//   WebkitLineClamp: 4, // Limite le nombre de lignes à afficher
+//   WebkitBoxOrient: 'vertical',
+// }))
+
 const BoxIcon = styled(Box)(({ theme }) => ({
   display: 'flex',
   paddingTop: '0.2rem',
@@ -112,18 +114,14 @@ const ArticleCard: React.FC<ArticleCardProps> = (props: ArticleCardProps) => {
         }}
       >
         <ImageContainer>
-          {/* <Image
+          <Image
             src={props.articleData?.imageUrl || DefaultArticleCard}
             alt={'Main image article'}
             width={336}
             height={197}
-          /> */}
-          <img
-            src={props.articleData?.imageUrl || DefaultArticleCard.src}
-            alt={'Main image article'}
-            width={336}
-            height={197}
+            loading={'eager'}
           />
+
         </ImageContainer>
         <TitleBoxStyled>
           {/* Changed structure to add link */}

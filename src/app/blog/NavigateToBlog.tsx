@@ -8,7 +8,7 @@ const NavigateTo = () => {
     const router = useRouter();
     useEffect(() => {
         router.push(`/blog/`);
-    }, []);
+    }, [router]);
     return <>
         <LoadingAnimation />
     </>

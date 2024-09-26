@@ -145,7 +145,7 @@ const SearchPreferences: React.FC<SearchPreferencesProps> = () => {
             const formValues: SearchPreferencesDataForm = transformUserPreferencesToFormValues(userPreferences, locationsContext.items, sectorsContext.items, jobsContext.items);
             reset(formValues);
         }
-    }, [sectorsContext, jobsContext, userPreferences, locationsContext, isLoading]);
+    }, [sectorsContext, jobsContext, userPreferences, locationsContext, isLoading, reset]);
 
     useEffect(() => {
         if (matchesMobile) {

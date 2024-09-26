@@ -11,14 +11,13 @@ import React from 'react'
 import { Box, styled, useMediaQuery } from '@mui/material'
 
 import StepOne from '@/assets/images/StepOne.png'
-import StepTwo from '@/assets/images/StepTwo.png'
 import StepThree from '@/assets/images/StepThree.png'
-import StepFour from '@/assets/images/StepFour.png'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import StepTwo from '@/assets/images/StepTwo.png'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
+import { theme } from '@/MUI/Theme'
 import Image from 'next/image'
 import Link from 'next/link'
-import { theme } from '@/MUI/Theme'
 import ComingSoon from '../ComingSoon'
 /*
 |--------------------------------------------------------------------------

@@ -18,7 +18,7 @@ import validationRules from '@/utils/ValidationRulesPreregister'
 export interface PreReleaseFormProps {
     title: string
     subtitle: string
-    onSubmit: (data: any) => void
+    onSubmit: (data: PreRegisterCandidateFormData) => void
     children?: React.ReactNode
 }
 

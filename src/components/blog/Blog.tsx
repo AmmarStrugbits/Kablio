@@ -10,7 +10,7 @@
 import TopicCard from '@/components/blog/TopicCard/TopicCard'
 import React from 'react'
 
-import { Box, Typography, styled, useMediaQuery } from '@mui/material'
+import { Box, Typography, styled } from '@mui/material'
 import { theme } from '@/MUI/Theme'
 import Link from 'next/link'
 // import HomepageLayout from '@/components/homepage/layout/layout'
@@ -58,7 +58,7 @@ const RowTopicCardBoxStyled = styled(Box)(({ theme }) => ({
   },
 }))
 
-const TitleBoxStyled = styled(Box)(({ theme }) => ({
+const TitleBoxStyled = styled(Box)(({ }) => ({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -72,7 +72,7 @@ const TitleBoxStyled = styled(Box)(({ theme }) => ({
 |--------------------------------------------------------------------------
 */
 const Blog: React.FC<BlogProps> = () => {
-  const matchesMobile = useMediaQuery(theme.breakpoints.down('md'))
+  // const matchesMobile = useMediaQuery(theme.breakpoints.down('md'))
   const topicChunks = chunk(topics, 3)
 
   // Render

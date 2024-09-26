@@ -9,12 +9,11 @@
 import SearchPreferences from '@/components/you/searchPreferences/SearchPreferences'
 import { SearchPreferenceDataProvider } from '@/contexts/searchPreferenceContext'
 import { withAuth } from '@/hoc/WithAuth'
-import { useAccount } from '@/hooks/useAccount'
 import { SearchPreferencesDataForm } from '@/shared/interfaces/SearchPreference.interfaces'
 import { defaultFormValues } from '@/utils/defaultFormValues'
 import { Box } from '@mui/material'
 import { styled } from '@mui/system'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
 /*
 |--------------------------------------------------------------------------

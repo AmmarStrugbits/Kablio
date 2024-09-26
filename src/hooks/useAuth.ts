@@ -21,7 +21,7 @@ export const useAuth = () => {
       setUser(res.data as User);
       router.push('/account/matches');
     }
-  }, []);
+  }, [router, setUser]);
 
   const logout = useCallback(() => {
     if (typeof window === 'undefined') return false;

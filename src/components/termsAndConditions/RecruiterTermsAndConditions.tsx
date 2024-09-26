@@ -38,7 +38,7 @@ const StyledText = styled(Typography)({
 | Component
 |--------------------------------------------------------------------------
 */
-const RecruiterTermsAndConditions: React.FC<RecruiterTermsAndConditionsProps> = ({ children }) => {
+const RecruiterTermsAndConditions: React.FC<RecruiterTermsAndConditionsProps> = ({  }) => {
     const matchesMobile = useMediaQuery(theme.breakpoints.down('md'));
 
 

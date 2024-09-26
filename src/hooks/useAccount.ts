@@ -68,7 +68,7 @@ export const useAccount = () => {
       setFromLocalStorage();
       fetchAndSetUser();
     }
-  }, []);
+  }, [router, searchParams, setUser]);
 
   return {
     user

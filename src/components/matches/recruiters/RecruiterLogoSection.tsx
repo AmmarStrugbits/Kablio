@@ -6,11 +6,11 @@
 | Author: eric@reskue.art
 */
 
+import InformationNotAvailable from '@/assets/images/InformationNotAvailable.png'
 import { PublicFileEmbeddable } from '@/shared/interfaces/JobPostClass'
-import { Box, styled, width } from '@mui/system'
+import { Box, styled } from '@mui/system'
 import Image from 'next/image'
 import React from 'react'
-import InformationNotAvailable from '@/assets/images/InformationNotAvailable.png'
 import EmployerUndisclosed from './EmployerUndisclosed'
 //import { styled } from '@mui/material'
 

@@ -1,13 +1,12 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
+import React from "react";
 
-import { Box, styled, keyframes, useMediaQuery } from "@mui/material";
+import { Box, keyframes, styled, useMediaQuery } from "@mui/material";
 
 import KablioWallPaperInfiniteA from "@/assets/images/KablioWallPaperInfiniteA.png";
 import KablioWallPaperInfiniteB from "@/assets/images/KablioWallPaperInfiniteB.png";
-import KablioBillboardWithWindmillsInTheBackground from "@/assets/images/KablioBillboardWithWindmillsInTheBackground.jpg";
 import { theme } from "@/MUI/Theme";
 
 /*
@@ -96,7 +95,7 @@ const AnimatedImagesContainer = styled(Box)(({ theme }) => ({
 }));
 
 
-const AnimatedImageWrapper = styled(Box)<{ animation: any }>(({ animation }) => ({
+const AnimatedImageWrapper = styled(Box)<{ animation: string }>(({ animation }) => ({
     width: "100%",
     height: "100%",
     animation: `${animation} 10s linear infinite`,
@@ -147,7 +146,7 @@ const ScreenShotsSection: React.FC = () => {
             <ImageBoxStyled>
                 <IframeContainer isMobile={matchesMobile}>
                     <StyledIframe
-                        src={matchesMobile 
+                        src={matchesMobile
                             ? "https://demo.arcade.software/hL1OMU9myvOzrxT8100F?embed&show_copy_link=true"
                             : "https://demo.arcade.software/V1chyyDYKtsDrSw29GJA?embed&show_copy_link=true"
                         }

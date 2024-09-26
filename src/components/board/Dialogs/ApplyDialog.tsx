@@ -10,12 +10,11 @@
 import Image from 'next/image'
 import React, { useContext } from 'react'
 
-import { theme } from '@/MUI/Theme'
-import { Box, styled, useMediaQuery } from '@mui/system'
 import { Button, Dialog, DialogProps, Typography } from '@mui/material'
+import { Box, styled } from '@mui/system'
 
-import { JobPostDto } from '@/shared/interfaces/JobPostClass'
 import { JobPostStatus } from '@/shared/enum/JobPost.enum'
+import { JobPostDto } from '@/shared/interfaces/JobPostClass'
 
 import InformationNotAvailable from '@/assets/images/InformationNotAvailable.png'
 import { BoardContext } from '@/components/board/BoardContext'
@@ -163,7 +162,7 @@ const Subtext = styled(Typography)(({ theme }) => ({
 const ApplyDialog: React.FC<ApplyDialogProps> = (props: ApplyDialogProps) => {
   const { status, data, onClose } = props;
   const { setNeedUpdate } = useContext(BoardContext)
-  const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  // const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const handleApply = async () => {
     await moveJobPost(data.id, status, JobPostStatus.APPLIED);

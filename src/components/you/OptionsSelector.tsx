@@ -71,7 +71,7 @@ const OptionsSelector = ({ createOptionsMappings, label, maxSelections, setSelec
         }
         setSelectedOptions(newSelectedOptions);
         setSelectedData(dataTypeId, newSelectedOptions);
-    }, [selectedOptions, setSelectedOptions, maxSelections]);
+    }, [selectedOptions, setSelectedOptions, maxSelections, dataTypeId, setSelectedData]);
 
     const handleDeselectAll = useCallback(() => {
         setSelectedOptions([]);

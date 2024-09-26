@@ -53,27 +53,27 @@ const Page: React.FC = () => {
   useEffect(() => {
     const getRecoveryToken = async () => {
       const token = searchParams.get('token');
-        if (token) {
-          setRecoveryToken(token);
-        };
+      if (token) {
+        setRecoveryToken(token);
+      };
       setIsLoading(() => false);
     };
     getRecoveryToken();
-  }, []);
+  }, [searchParams]);
 
 
   // Render
   //--------------------------------------------------------------------------
   if (isLoading) {
     return (
-     <LoadingAnimation/>
+      <LoadingAnimation />
     )
   }
 
   if (!isLoading) {
     return (
       <PageContainer>
-      {recoveryToken ? <RecoverPassword token={recoveryToken}/> : <FailedPasswordRecovery/>}
+        {recoveryToken ? <RecoverPassword token={recoveryToken} /> : <FailedPasswordRecovery />}
       </PageContainer>
     )
   }

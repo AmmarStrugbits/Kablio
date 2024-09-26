@@ -7,23 +7,22 @@
 */
 
 import { theme } from '@/MUI/Theme'
-import { Box, Button, Typography, useMediaQuery, styled } from '@mui/material'
+import { Box, Button, styled, Typography, useMediaQuery } from '@mui/material'
 import React, { useContext, useEffect, useState } from 'react'
 
 import { BoardContext } from './BoardContext'
 
+import GetBackToSwiping from '@/components/board/GetBackToSwiping'
 import JobCard from '@/components/board/JobCard'
 import PreferencesButton from '@/components/board/PreferencesButton'
 import StatusButton from '@/components/board/StatusButton'
-import GetBackToSwiping from '@/components/board/GetBackToSwiping'
 import LoadingAnimation from '@/shared/components/LoadingAnimation'
 
-import { UserJobPostsStatus } from '../matches/Match'
 import { JobPostStatus } from '@/shared/enum/JobPost.enum'
+import { UserJobPostsStatus } from '../matches/Match'
 
-import { getJobsStatus } from '@/services/matches/match.services'
 import { AuthContext } from '@/contexts/AuthContext'
-import { JobPostDto } from '@/shared/interfaces/JobPostClass'
+import { getJobsStatus } from '@/services/matches/match.services'
 /*
 |--------------------------------------------------------------------------
 | Contracts

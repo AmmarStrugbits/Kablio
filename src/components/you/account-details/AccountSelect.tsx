@@ -193,7 +193,7 @@ const AccountSelect: React.FC<AccountSelectProps> = (props: AccountSelectProps) 
     if (!user?.[fieldName]) {
       setMissingInfo(true)
     }
-  }, [user])
+  }, [user, fieldName])
 
   const displayFieldContent = (): React.JSX.Element => {
     if (!user?.[fieldName]) {
@@ -235,33 +235,33 @@ const AccountSelect: React.FC<AccountSelectProps> = (props: AccountSelectProps) 
     </HeadBox>
     <form onSubmit={handleSubmit(onSubmit)}>
 
-   <Box
+      <Box
         display="flex"
         flexDirection="column"
         gap="10px"
       >
-    <FormControl variant="standard" fullWidth>
-      <SelectStyled
-        id="countryCode-input"
-        {...register("countryCode", validationRules.countryCode)}
-        defaultValue=''
-        displayEmpty MenuProps={{
-          PaperProps: {
-            sx: {
-              maxHeight: '9rem',
-            },
-          },
-        }}
-      >
-        <MenuItem value="" disabled>Select a Country</MenuItem>
-        {Object.entries(ISO31661Alpha2ToCountryName).map(([code, name]) => (
-          <MenuItemStyled key={code} value={code}>{name}</MenuItemStyled>
-        ))}
-      </SelectStyled>
-      {errors.countryCode && <ErrorTypography color="error">{errors.countryCode.message as ReactNode}</ErrorTypography>}
-    </FormControl>
-    <SaveButton type='submit'>Save</SaveButton>
-    </Box>
+        <FormControl variant="standard" fullWidth>
+          <SelectStyled
+            id="countryCode-input"
+            {...register("countryCode", validationRules.countryCode)}
+            defaultValue=''
+            displayEmpty MenuProps={{
+              PaperProps: {
+                sx: {
+                  maxHeight: '9rem',
+                },
+              },
+            }}
+          >
+            <MenuItem value="" disabled>Select a Country</MenuItem>
+            {Object.entries(ISO31661Alpha2ToCountryName).map(([code, name]) => (
+              <MenuItemStyled key={code} value={code}>{name}</MenuItemStyled>
+            ))}
+          </SelectStyled>
+          {errors.countryCode && <ErrorTypography color="error">{errors.countryCode.message as ReactNode}</ErrorTypography>}
+        </FormControl>
+        <SaveButton type='submit'>Save</SaveButton>
+      </Box>
     </form>
   </MainContainer>)
 }

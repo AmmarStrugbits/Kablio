@@ -9,12 +9,10 @@
 import MatchPage from '@/components/matches/Match';
 import { SearchPreferenceDataProvider } from '@/contexts/searchPreferenceContext';
 import { withAuth } from '@/hoc/WithAuth';
-import { useAccount } from '@/hooks/useAccount';
 import { postSearchPreference } from '@/services/matches/match.services';
-import LoadingAnimation from '@/shared/components/LoadingAnimation';
 import { SearchPreferenceData, SearchPreferencesDataForm } from '@/shared/interfaces/SearchPreference.interfaces';
 import { defaultFormValues } from '@/utils/defaultFormValues';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 
 /*

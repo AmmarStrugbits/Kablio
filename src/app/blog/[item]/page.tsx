@@ -2,15 +2,29 @@ import BlogPageHandler from '@/components/blog/BlogPageHandler'
 import { createClient } from '@/prismicio'
 import { topics } from '@/services/blog/blog.services'
 import type { Metadata } from 'next'
+import { redirect } from 'next/navigation'
 import Script from 'next/script'
 import { topicsSchema } from './blogSchema'
 import { getAllArticlesByTagType, getArticles, getArticlesByUid } from './services'
-import { redirect } from 'next/navigation'
+import { AllDocumentTypes } from '../../../../prismicio-types'
 
 type Props = {
   params: { item: string }
 }
 type TopicExists = boolean
+
+interface ListItem {
+  '@type': 'ListItem';
+  position: number;
+  name: string;
+  item: string;
+}
+
+interface BreadcrumbList {
+  '@context': 'https://schema.org/';
+  '@type': 'BreadcrumbList';
+  itemListElement: ListItem[];
+}
 
 export interface ArticleDataOverview {
   uid: string;
@@ -395,13 +409,14 @@ const topicMetadata = [
   },
 ]
 
-let topicSchema: any
-let subTopicSchema: any = []
+let topicSchema: BreadcrumbList
+let subTopicSchema: (BreadcrumbList[] | undefined) = [];
 
 export async function generateMetadata({
   params,
 }: Props): Promise<Metadata | null> {
   const client = createClient()
+
   let articleByUID
   const topicExists = topics.some((topic) => topic.tag === params.item)
   let pageTitle = params.item
@@ -410,6 +425,8 @@ export async function generateMetadata({
   if (topicExists) {
     const matchingTopic = topics.find((topic) => topic.tag === params.item)
     const topicMeta = topicMetadata.find((meta) => meta.tag === params.item)
+
+    // @ts-expect-error: Type mismatch between interface and function
     topicSchema = await topicsSchema.find(
       (schema) => schema.tag === params.item
     )?.schema
@@ -444,6 +461,7 @@ export async function generateMetadata({
       console.error(`Error fetching article: ${error}`)
       return null
     }
+    // @ts-expect-error: Type mismatch between interface and function
     subTopicSchema = await topicsSchema.find(
       (schema) => schema.tag === params.item
     )?.schema
@@ -491,21 +509,40 @@ export async function generateMetadata({
   return metadata
 }
 
+export async function generateStaticParams() {
+  const client = createClient();
+
+  const allArticles = await client.getAllByType('article');
+  if (Array.isArray(allArticles) && allArticles.length > 0) {
+    const paths = allArticles.map((article) => ({
+      params: { item: article.uid },
+    }));
+
+    return paths;
+  } else {
+    console.error("Error: No articles found or unexpected response format from Prismic.");
+    return [];
+  }
+
+}
 
 export default async function Page({ params }: Props) {
 
   const topicExists: TopicExists = topics.some((topic) => topic.tag === params.item);
-  let articles: any;
-  let topicArticles: any;
-  let articlesTyTag: any;
+ // @ts-expect-error: Type mismatch between interface and function
+  let articles: AllDocumentTypes  = undefined
+
+  let topicArticles: ArticleDataOverview[] = [];
+  let articlesByTag: ArticleDataOverview[] = [];
   let loading = true;
 
 
   if (topicExists) {
     topicArticles = await getArticles(params);
   } else {
+     // @ts-expect-error: Type mismatch between interface and function
     articles = await getArticlesByUid(params);
-    articlesTyTag = await getAllArticlesByTagType(params)
+    articlesByTag = await getAllArticlesByTagType(params)
   }
 
   loading = false;
@@ -514,7 +551,7 @@ export default async function Page({ params }: Props) {
     topicExists,
     articles,
     topicArticles,
-    articlesTyTag,
+    articlesByTag,
     loading,
     tag: params.item
   }
@@ -551,6 +588,7 @@ export default async function Page({ params }: Props) {
           />
         </>
       )}
+
       <BlogPageHandler {...props} />
     </>
   )

@@ -95,7 +95,7 @@ const SubtitleBoxStyled = styled(Box)(({ theme }) => ({
 | Component
 |--------------------------------------------------------------------------
 */
-const ReputationSection: React.FC<ReputationSectionProps> = ({ children }) => {
+const ReputationSection: React.FC<ReputationSectionProps> = ({  }) => {
     const matchesMobile = useMediaQuery(theme.breakpoints.down('lg'));
     // Render
     //--------------------------------------------------------------------------

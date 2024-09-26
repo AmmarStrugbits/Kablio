@@ -1,7 +1,12 @@
 'use client'
 import NavbarQuizz from "@/components/navbar/NavbarQuizz";
+import { ReactNode } from "react";
 
-export default function AuthLayout(props: any) {
+type Props = {
+    children: ReactNode;
+};
+
+export default function AuthLayout(props: Props) {
     const { children } = props;
 
     return (

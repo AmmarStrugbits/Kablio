@@ -10,7 +10,7 @@ type PropsType = {
     topicExists: boolean
     articles: AllDocumentTypes
     topicArticles: ArticleDataOverview[]
-    articlesTyTag: ArticleDataOverview[]
+    articlesByTag: ArticleDataOverview[]
     loading: boolean
     tag: string
 }
@@ -42,7 +42,7 @@ const PageBoxStyle = {
 const BlogPageHandler = ({
     topicExists,
     topicArticles,
-    articlesTyTag,
+    articlesByTag,
     articles,
     loading,
     tag
@@ -61,7 +61,7 @@ const BlogPageHandler = ({
                         <Topics topicArticles={topicArticles} tag={tag} />
                     ) :
                     (
-                        <Article articlesTyTag={articlesTyTag} articles={articles} tag={tag} />
+                        <Article articlesByTag={articlesByTag} articles={articles} tag={tag} />
                     )}
             </Box>
         </>

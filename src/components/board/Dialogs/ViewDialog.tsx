@@ -6,11 +6,11 @@
 | Author: eric@reskue.art
 */
 
-import React, { useContext } from 'react'
 import { theme } from '@/MUI/Theme';
-import { Box, padding, styled, useMediaQuery } from '@mui/system';
-import { Button, Dialog, DialogProps, IconButton } from '@mui/material'
 import DoneIcon from '@mui/icons-material/Done';
+import { Button, Dialog, DialogProps, IconButton } from '@mui/material';
+import { Box, styled, useMediaQuery } from '@mui/system';
+import React, { useContext } from 'react';
 
 import { BoardContext } from '../BoardContext';
 
@@ -21,8 +21,8 @@ import RemoveButton from './RemoveButton';
 import { CloseViewDialogIcon } from '@/assets/svgs/board/CloseViewDialogIcon';
 import { CloseViewDialogIconMobile } from '@/assets/svgs/board/CloseViewDialogIconMobile';
 import { DeleteViewDialogIcon } from '@/assets/svgs/board/DeleteViewDialogIcon';
-import { JobPostClass } from '@/shared/interfaces/JobPostClass'
 import { JobPostStatus } from '@/shared/enum/JobPost.enum';
+import { JobPostClass } from '@/shared/interfaces/JobPostClass';
 
 import { moveJobPost, removeJobPost } from '@/services/board/board.services';
 

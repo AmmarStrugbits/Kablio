@@ -1,8 +1,7 @@
 import { ExperienceLevel } from '@/shared/enum/ExperienceLevel.enum';
 import { ContractType } from '../enum/ContractType.enum';
-import { SocialMediaEmbeddable } from './SearchPreference.interfaces';
-import { ThumbUpSharp, TransferWithinAStation } from '@mui/icons-material';
 import { Currency } from '../enum/Currency.enum';
+import { SocialMediaEmbeddable } from './SearchPreference.interfaces';
 
 export interface ExternalLink {
     title: string;

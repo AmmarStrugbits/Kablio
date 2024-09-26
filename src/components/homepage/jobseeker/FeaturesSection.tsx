@@ -10,10 +10,9 @@ import React from 'react'
 
 import { Box, styled, useMediaQuery } from '@mui/material'
 
-import RelevantJobseeker from '@/assets/images/RelevantJobseeker.png'
 import JobMatches from '@/assets/images/JobMatches.png'
+import RelevantJobseeker from '@/assets/images/RelevantJobseeker.png'
 import ScrollFreeZone from '@/assets/images/ScrollFreeZone.png'
-import InfoCardwithIconVertical from '../InfoCardWithIconVertical'
 import { theme } from '@/MUI/Theme'
 import InfoCardwithIconVerticalJobSeeker from './InfoCardWithIconVerticalJobSeeker'
 
@@ -106,27 +105,27 @@ const FeaturesSection: React.FC = () => {
                 <InfoCardwithIconVerticalJobSeeker
                     title="personalised recommendations"
                     text="AI-powered matches"
-                    icon={RelevantJobseeker} iconPosition="bottom"
+                    icon={RelevantJobseeker} iconposition="bottom"
                     backgroundColor="#00FBDF"
-                    iconWidth={5}
+                    iconwidth={5}
                     width={13}
                 />
                 <InfoCardwithIconVerticalJobSeeker
                     title="Companies apply to you"
                     text="Make yourself a target"
                     icon={JobMatches}
-                    iconPosition="bottom"
+                    iconposition="bottom"
                     backgroundColor="#00FBDF"
-                    iconWidth={matchesMobile ? 6 : 9}
+                    iconwidth={matchesMobile ? 6 : 9}
                     width={13}
                 />
                 <InfoCardwithIconVerticalJobSeeker
                     title="Swipe Experience"
                     text="Skip, save or apply"
                     icon={ScrollFreeZone}
-                    iconPosition="bottom"
+                    iconposition="bottom"
                     backgroundColor="#00FBDF"
-                    iconWidth={matchesMobile ? 4 : 5}
+                    iconwidth={matchesMobile ? 4 : 5}
                     width={13}
                 />
             </FeaturesBoxStyled>

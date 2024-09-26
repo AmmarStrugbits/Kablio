@@ -102,7 +102,7 @@ const QuestionTypographyStyled = styled(Typography)(({ theme }) => ({
 | Component
 |--------------------------------------------------------------------------
 */
-const SignUp: React.FC<SignUpProps> = ({ children }) => {
+const SignUp: React.FC<SignUpProps> = ({  }) => {
     const matchesMobile = useMediaQuery(theme.breakpoints.down("md"));
 
     const methods = useForm<SignupRequest>();
@@ -115,7 +115,7 @@ const SignUp: React.FC<SignUpProps> = ({ children }) => {
     useEffect(() => {
         const errorMessage = searchParams.get("error");
         if (errorMessage) console.error(errorMessage);
-    }, []);
+    }, [searchParams]);
 
     /************** Handlers ***************/
     const handleNext = () => {
